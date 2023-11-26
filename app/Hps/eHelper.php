@@ -4,7 +4,7 @@ namespace App\Hps;
 
 class eHelper extends Base
 {
-    public function formatMoney($stringNumber, $sep = '.', $format = ' ₫')
+    public static function formatMoney($stringNumber, $sep = '.', $format = ' ₫')
     {
         if(!$stringNumber) {
             return 0;

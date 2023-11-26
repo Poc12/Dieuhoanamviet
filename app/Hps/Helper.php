@@ -216,6 +216,22 @@ if (! function_exists('show_img')) {
     }
 }
 
+if (! function_exists('format_money')) {
+    function format_money ($money)
+    {
+        return \App\Hps\eHelper::formatMoney($money);
+    }
+}
+
+if (! function_exists('format_money_vnd')) {
+    function format_money_vnd ($money)
+    {
+        return \App\Hps\eHelper::formatMoney($money,  $sep = '.', $₫ = ' VNĐ');
+    }
+}
+
+
+
 if (! function_exists('get_link_html')) {
     function get_link_html($link): string
     {

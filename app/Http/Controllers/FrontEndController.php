@@ -21,7 +21,9 @@ abstract class FrontEndController extends Controller
     protected $upload;
     protected $dir = __DIR__;
     protected $response;
+    protected $per_page = 20;
     use SEOTools;
+
 
 
     public function index($action = '')

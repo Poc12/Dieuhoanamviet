@@ -32,22 +32,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-//        $info = eCache::getInstance()->get('info');
-//        $menu = eCache::getInstance()->get('menu');
-//        if(!$info) {
-//            $info = Config::query()->first();
-//            eCache::getInstance()->add('info', $info);
-//        }
-//        if(!$menu) {
-//            $menu = Menu::query()->where('status', BaseModel::getStatusActive())
-//                ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])->get()->groupBy('type');
-//            eCache::getInstance()->add('menu', $menu);
-//        }
         $info = Config::query()->first();
         $menu = Menu::query()->where('status', BaseModel::getStatusActive())
             ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])->get()->groupBy('type');
 
-        $cate = Category::query()->active()->where('type','<>', Category::get_type_tag())->get(['id', 'name']);
+        $cate = Category::query()->with(['product'])->active()
+            ->where('type','=', Category::get_type_product())
+            ->get();
 
         $sites = SitemapController::get_site_map(false);
         $sitemap = Sitemap::create();
