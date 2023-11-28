@@ -25,10 +25,10 @@ class HomeController extends FrontEndController
 
     function list(Request $request){
         $banner = Banner::query()->active()->get();
-        $trending_book = ProductModel::query()->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
+        $trending_product= ProductModel::query()->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
         $pluck = [];
-        if(!$trending_book->isEmpty()) {
-            $pluck = $trending_book->pluck('id')->toArray();
+        if(!$trending_product->isEmpty()) {
+            $pluck = $trending_product->pluck('id')->toArray();
         }
         $recommended = ProductModel::query()->with('category')
             ->withCount('like')
@@ -40,7 +40,7 @@ class HomeController extends FrontEndController
         $tpl = [
             'product' => $all_product,
             'banners' => $banner,
-            'trending_book' => $trending_book,
+            'trending_product' => $trending_product,
             'recommended' => $recommended,
             'videos' => $videos,
             'posts' => $posts,
