@@ -105,13 +105,6 @@
                                 <p>© 2023 Công ty TNHH Nam Việt </p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="tp-footer-payment text-md-end">
-                                <p>
-                                    <img src="assets/img/footer/footer-pay.png" alt="">
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

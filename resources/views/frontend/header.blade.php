@@ -169,7 +169,7 @@
                                                 @else
                                                     @if(!$item['parent_id'])
                                                         <li  class="has-dropdown has-mega-menu">
-                                                            <a href="shop.html">{{$item['name']}}</a>
+                                                            <a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{$item['name']}}</a>
                                                             <div class="shop-mega-menu tp-submenu tp-mega-menu">
                                                                 <div class="row">
                                                                     <div class="col-lg-2">
@@ -224,7 +224,7 @@
                                 </div>
                                 <div class="tp-header-contact-content">
                                     <h5>Hotline:</h5>
-                                    <p><a href="tel:402-763-282-46">+(402) 763 282 46</a></p>
+                                    <p><a href="tel:{{@$info['phone']}}">{{@$info['phone']}}</a></p>
                                 </div>
                             </div>
                         </div>
