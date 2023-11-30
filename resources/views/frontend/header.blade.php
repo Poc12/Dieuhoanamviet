@@ -234,3 +234,67 @@
         </div>
     </div>
 </header>
+
+<div id="header-sticky-2" class="tp-header-sticky-area">
+    <div class="container">
+        <div class="tp-mega-menu-wrapper p-relative">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-6">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-lg-9 col-md-9 d-none d-md-block">
+                    <div class="tp-header-sticky-menu main-menu menu-style-1">
+                        <nav id="mobile-menu">
+                            <ul>
+                                @if(@$menu && $menu[\App\Models\Menu::getMenuHeader()])
+                                    @php
+                                        $header_menu = $menu[\App\Models\Menu::getMenuHeader()];
+                                        $plug_menu = $header_menu->where('parent_id', '<>', 0)->pluck('parent_id')->toArray();
+                                        $get_menu = $header_menu->where('parent_id', '<>', 0)->groupBy('parent_id')->toArray()
+                                    @endphp
+                                    @foreach($menu[1] as $item)
+                                        @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
+                                            @if(!$item['apply'])
+                                                <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
+                                            @elseif($item['apply'] === 3)
+                                                <li><a href="{{get_link_html(@$item['post_static']['slug'])}}">{{$item['name']}}</a></li>
+                                            @else
+                                                <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
+                                            @endif
+                                        @else
+                                            @if(!$item['parent_id'])
+                                                <li  class="has-dropdown has-mega-menu">
+                                                    <a href="shop.html">{{$item['name']}}</a>
+                                                    <div class="shop-mega-menu tp-submenu tp-mega-menu">
+                                                        <div class="row">
+                                                            <div class="col-lg-2">
+                                                                <div class="shop-mega-menu-list">
+                                                                    <a href="{{@$item['apply'] === 3 ? get_link_html(@$item['post_static']['slug']) : get_link_cate(@$item['apply_rele']['slug'])}}" class="shop-mega-menu-title">{{@$item['name']}}</a>
+                                                                    <ul>
+                                                                        @if(isset($get_menu[$item['id']]))
+                                                                            @foreach($get_menu[$item['id']] as $val)
+                                                                                <li><a href="{{@$val['apply'] === 3 ? get_link_html(@$val['post_static']['slug']) : get_link_cate(@$val['apply_rele']['slug'])}}">{{@$val['name']}}</a></li>
+                                                                            @endforeach
+                                                                        @endif
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            @endif
+                                        @endif
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
