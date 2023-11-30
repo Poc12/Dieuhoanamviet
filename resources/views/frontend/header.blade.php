@@ -44,8 +44,8 @@
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-lg-2 col-md-4 col-6">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/img/logo/logo.svg" alt="logo">
+                            <a href="/">
+                                <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="tp-header-search pl-70">
                             <form method="POST" id="searchForm">
                                 <div class="tp-header-search-wrapper d-flex align-items-center">
-                                    <div class="tp-header-search-box">
+                                    <div class="tp-header-search-box" style="border-radius: 20%">
                                         <input name="search" type="text" placeholder="Nhập tên sản phầm cần tìm ">
                                     </div>
                                     <div class="tp-header-search-btn">
