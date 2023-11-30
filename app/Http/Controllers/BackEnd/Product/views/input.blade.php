@@ -85,7 +85,7 @@
                                 <div class="col-12 my-2">
                                     <div class="form-group">
                                         <label for="description">Mô tả</label>
-                                        <textarea class="tinymce" id="content" name="descriptionp">{!! @$obj['description'] !!}</textarea>
+                                        <textarea class="tinymce" id="content" name="description">{!! @$obj['description'] !!}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-12 my-2">
