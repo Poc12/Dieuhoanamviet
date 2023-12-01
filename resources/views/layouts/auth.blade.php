@@ -32,12 +32,12 @@
             <div class="card">
                 <div class="card-body p-4">
                     <div class="text-center mt-2">
-                        <img src="{{url('assets/images/cinv_logo.png')}}" alt="" height="60" class="logo">
+                        <img src="{{url('assets/images/logo.jpg')}}" alt="" height="60" class="logo">
                     </div>
 
                     <div class="text-center mt-2">
                         <h5 class="text-primary">@if($route == 'login') Welcome Back ! @else Register Account @endif </h5>
-                        <p class="text-muted">@if($route == 'login') Sign in to continue to cininh. @else Get your free Minible account now. @endif  </p>
+                        <p class="text-muted">@if($route == 'login') Sign in to continue. @else Get your free account now. @endif  </p>
                     </div>
                     <div class="p-2 mt-4">
                         @yield('content')
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="mt-5 text-center">
-                <p>© <script>document.write(new Date().getFullYear())</script> cininh. Crafted with <i class="mdi mdi-heart text-danger"></i> by cinv</p>
+                <p>© <script>document.write(new Date().getFullYear())</script>Crafted with <i class="mdi mdi-heart text-danger"></i> by Thanh</p>
             </div>
         </div>
         </div>
