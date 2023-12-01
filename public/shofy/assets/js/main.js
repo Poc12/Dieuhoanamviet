@@ -1722,7 +1722,7 @@
 			range: true,
 			min: 0,
 			max: 500,
-			values: [75, 300],
+			values: [500.000, 10000.000],
 			slide: function (event, ui) {
 				$("#amount").val( ui.values[0]+"VND" + " - " + ui.values[1]+"VND");
 			}
@@ -1734,7 +1734,7 @@
 			range: true,
 			min: 0,
 			max: 500,
-			values: [75, 300],
+			values: [500.000, 10000.000],
 			slide: function (event, ui) {
 				$("#amount-offcanvas").val( ui.values[0]+"VND"+ "-" + ui.values[1]+"VND");
 			}
@@ -1786,8 +1786,8 @@
 		$("#slider-range").slider({
 			range: true,
 			min: 0,
-			max: 500,
-			values: [75, 300],
+			max: 10000.000,
+			values: [500.000, 10000.000],
 			slide: function (event, ui) {
 			  $("#amount").val( ui.values[0] +"VND" + " - " + ui.values[1]+"VND");
 			},
