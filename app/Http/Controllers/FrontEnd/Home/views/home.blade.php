@@ -420,7 +420,7 @@
         </section>
         <!-- product arrival area end -->
         <!-- product banner area start -->
-        <div class="tp-product-banner-area pb-10">
+        <div class="tp-product-banner-area pb-20">
             <div class="container">
                 <div class="tp-product-banner-slider fix">
                     <div class="tp-product-banner-slider-active swiper-container">
