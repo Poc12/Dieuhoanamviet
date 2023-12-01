@@ -8,7 +8,7 @@
         <!--Swiper Banner End-->
 
         <!-- product category area start -->
-        <section class="tp-product-category pt-60 pb-15">
+        <section class="tp-product-category pt-20 pb-10">
             <div class="container">
                 <div class="row row-cols-xl-5 row-cols-lg-5 row-cols-md-4">
                     <div class="col">
@@ -92,7 +92,7 @@
         <!-- product category area end -->
 
         <!-- shop area start -->
-        <section class="tp-shop-area pb-120">
+        <section class="tp-shop-area pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 col-lg-8">
@@ -280,7 +280,7 @@
         <!-- shop area end -->
 
         <!-- banner area start -->
-        <section class="tp-banner-area pb-70">
+        <section class="tp-banner-area pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-7">
@@ -320,7 +320,7 @@
 
 
         <!-- product arrival area start -->
-        <section class="tp-product-arrival-area pb-55">
+        <section class="tp-product-arrival-area pb-20">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-xl-5 col-sm-6">
@@ -420,7 +420,7 @@
         </section>
         <!-- product arrival area end -->
         <!-- product banner area start -->
-        <div class="tp-product-banner-area pb-90">
+        <div class="tp-product-banner-area pb-10">
             <div class="container">
                 <div class="tp-product-banner-slider fix">
                     <div class="tp-product-banner-slider-active swiper-container">
@@ -468,7 +468,7 @@
         <!-- product banner area end -->
 
         <!-- blog area start -->
-        <section class="tp-blog-area pt-50 pb-75">
+        <section class="tp-blog-area pt-10 pb-10">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-xl-4 col-md-6">
