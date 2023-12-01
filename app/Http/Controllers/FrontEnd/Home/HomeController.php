@@ -25,7 +25,8 @@ class HomeController extends FrontEndController
 
     function list(Request $request){
         $banner = Banner::query()->active()->get();
-        $trending_product= ProductModel::query()->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
+        $trending_product= ProductModel::query()->with('category')->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
+        $new_product = ProductModel::query()->typeOfficial()->active()->orderByDesc('created_at')->limit(3)->get();
         $pluck = [];
         if(!$trending_product->isEmpty()) {
             $pluck = $trending_product->pluck('id')->toArray();
@@ -44,7 +45,8 @@ class HomeController extends FrontEndController
             'recommended' => $recommended,
             'videos' => $videos,
             'posts' => $posts,
-            'category' => $all_category
+            'category' => $all_category,
+            'new_product' => $new_product
         ];
         return eView::getInstance()->setView($this->dir, 'home', $tpl);
     }

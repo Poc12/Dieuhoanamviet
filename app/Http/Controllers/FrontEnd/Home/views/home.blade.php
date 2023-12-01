@@ -318,109 +318,6 @@
         </section>
         <!-- banner area end -->
 
-        <!-- product banner area start -->
-        <div class="tp-product-banner-area pb-90">
-            <div class="container">
-                <div class="tp-product-banner-slider fix">
-                    <div class="tp-product-banner-slider-active swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="tp-product-banner-inner theme-bg p-relative z-index-1 fix swiper-slide">
-                                <h4 class="tp-product-banner-bg-text">tablet</h4>
-                                <div class="row align-items-center">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-content p-relative z-index-1">
-                                            <span class="tp-product-banner-subtitle">Tablet Collection 2023</span>
-                                            <h3 class="tp-product-banner-title">Samsung Galaxy Tab S6, Wifi Tablet</h3>
-                                            <div class="tp-product-banner-price mb-40">
-                                                <span class="old-price">$1240.00</span>
-                                                <p class="new-price">$975.00</p>
-                                            </div>
-                                            <div class="tp-product-banner-btn">
-                                                <a href="shop.html" class="tp-btn tp-btn-2">Shop now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-thumb-wrapper p-relative">
-                                            <div class="tp-product-banner-thumb-shape">
-                                                <span class="tp-product-banner-thumb-gradient"></span>
-                                                <img class="tp-offer-shape" src="assets/img/banner/banner-slider-offer.png" alt="">
-                                            </div>
-
-                                            <div class="tp-product-banner-thumb text-end p-relative z-index-1">
-                                                <img src="assets/img/banner/banner-slider-1.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-product-banner-inner theme-bg p-relative z-index-1 fix swiper-slide">
-                                <h4 class="tp-product-banner-bg-text">tablet</h4>
-                                <div class="row align-items-center">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-content p-relative z-index-1">
-                                            <span class="tp-product-banner-subtitle">Latest Technology Added</span>
-                                            <h3 class="tp-product-banner-title">Apple iPad 10.2 9th Gen - 2021</h3>
-                                            <div class="tp-product-banner-price mb-40">
-                                                <span class="old-price">$1450.00</span>
-                                                <p class="new-price">$1199.00</p>
-                                            </div>
-                                            <div class="tp-product-banner-btn">
-                                                <a href="shop.html" class="tp-btn tp-btn-2">Shop now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-thumb-wrapper p-relative">
-                                            <div class="tp-product-banner-thumb-shape">
-                                                <span class="tp-product-banner-thumb-gradient"></span>
-                                                <img class="tp-offer-shape" src="assets/img/banner/banner-slider-offer.png" alt="">
-                                            </div>
-
-                                            <div class="tp-product-banner-thumb text-end p-relative z-index-1">
-                                                <img src="assets/img/banner/banner-slider-2.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tp-product-banner-inner theme-bg p-relative z-index-1 fix swiper-slide">
-                                <h4 class="tp-product-banner-bg-text">tablet</h4>
-                                <div class="row align-items-center">
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-content p-relative z-index-1">
-                                            <span class="tp-product-banner-subtitle">Tablet Collection 2023</span>
-                                            <h3 class="tp-product-banner-title">Microsoft Surface Pro 8, Wifi Included</h3>
-                                            <div class="tp-product-banner-price mb-40">
-                                                <span class="old-price">$1249.00</span>
-                                                <p class="new-price">$1300.00</p>
-                                            </div>
-                                            <div class="tp-product-banner-btn">
-                                                <a href="shop.html" class="tp-btn tp-btn-2">Shop now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6">
-                                        <div class="tp-product-banner-thumb-wrapper p-relative">
-                                            <div class="tp-product-banner-thumb-shape">
-                                                <span class="tp-product-banner-thumb-gradient"></span>
-                                                <img class="tp-offer-shape" src="assets/img/banner/banner-slider-offer.png" alt="">
-                                            </div>
-
-                                            <div class="tp-product-banner-thumb text-end p-relative z-index-1">
-                                                <img src="assets/img/banner/banner-slider-3.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-product-banner-slider-dot tp-swiper-dot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- product banner area end -->
 
         <!-- product arrival area start -->
         <section class="tp-product-arrival-area pb-55">
@@ -428,12 +325,7 @@
                 <div class="row align-items-end">
                     <div class="col-xl-5 col-sm-6">
                         <div class="tp-section-title-wrapper mb-40">
-                            <h3 class="tp-section-title"> Sản Phẩm HOT
-
-                                <svg width="114" height="35" viewBox="0 0 114 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M112 23.275C1.84952 -10.6834 -7.36586 1.48086 7.50443 32.9053" stroke="currentColor" stroke-width="4" stroke-miterlimit="3.8637" stroke-linecap="round"/>
-                                </svg>
-                            </h3>
+                            <h4 class="tp-section-title"> Sản Phẩm HOT</h4>
                         </div>
                     </div>
                     <div class="col-xl-7 col-sm-6">
@@ -527,6 +419,53 @@
             </div>
         </section>
         <!-- product arrival area end -->
+        <!-- product banner area start -->
+        <div class="tp-product-banner-area pb-90">
+            <div class="container">
+                <div class="tp-product-banner-slider fix">
+                    <div class="tp-product-banner-slider-active swiper-container">
+                        <div class="swiper-wrapper">
+                            @if(isset($new_product))
+                                @foreach($new_product as $item)
+                                    <div class="tp-product-banner-inner theme-bg p-relative z-index-1 fix swiper-slide">
+                                        <h4 class="tp-product-banner-bg-text">tablet</h4>
+                                        <div class="row align-items-center">
+                                            <div class="col-xl-6 col-lg-6">
+                                                <div class="tp-product-banner-content p-relative z-index-1">
+                                                    <h5 class="tp-product-banner-title">{{$item['name']}}</h5>
+                                                    <div class="tp-product-banner-price mb-40">
+                                                        <span class="old-price">{{format_money_vnd($item['price'])}}</span>
+                                                        <p class="new-price">{{format_money_vnd($item['price_sell'])}}</p>
+                                                    </div>
+                                                    <div class="tp-product-banner-btn">
+                                                        <a href="{{$info['zalo']}}" class="tp-btn tp-btn-2">Liên hệ </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6">
+                                                <div class="tp-product-banner-thumb-wrapper p-relative">
+                                                    <div class="tp-product-banner-thumb-shape">
+                                                        <span class="tp-product-banner-thumb-gradient"></span>
+                                                        <img class="tp-offer-shape"  src="{{url('shofy/assets/img/banner/banner-slider-offer.png')}}" alt="">
+                                                    </div>
+
+                                                    <div class="tp-product-banner-thumb text-end p-relative z-index-1">
+                                                        <img src="{{images_src($item['avatar'])}}" width="400" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
+
+                        </div>
+                        <div class="tp-product-banner-slider-dot tp-swiper-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product banner area end -->
 
         <!-- blog area start -->
         <section class="tp-blog-area pt-50 pb-75">
@@ -534,12 +473,7 @@
                 <div class="row align-items-end">
                     <div class="col-xl-4 col-md-6">
                         <div class="tp-section-title-wrapper mb-50">
-                            <h3 class="tp-section-title"> Tin Sản phẩm
-
-                                <svg width="114" height="35" viewBox="0 0 114 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M112 23.275C1.84952 -10.6834 -7.36586 1.48086 7.50443 32.9053" stroke="currentColor" stroke-width="4" stroke-miterlimit="3.8637" stroke-linecap="round"/>
-                                </svg>
-                            </h3>
+                            <h4 class="tp-section-title">Tin Sản phẩm</h4>
                         </div>
                     </div>
                     <div class="col-xl-8 col-md-6">
