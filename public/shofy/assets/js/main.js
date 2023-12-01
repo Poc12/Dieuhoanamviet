@@ -1721,8 +1721,8 @@
 		$("#slider-range").slider({
 			range: true,
 			min: 0,
-			max: 500,
-			values: [500.000, 10000.000],
+			max: 10000000,
+			values: [500000, 10000000],
 			slide: function (event, ui) {
 				$("#amount").val( ui.values[0]+"VND" + " - " + ui.values[1]+"VND");
 			}
@@ -1733,8 +1733,8 @@
 		$("#slider-range-offcanvas").slider({
 			range: true,
 			min: 0,
-			max: 500,
-			values: [500.000, 10000.000],
+			max: 10000000,
+			values: [500000, 10000000],
 			slide: function (event, ui) {
 				$("#amount-offcanvas").val( ui.values[0]+"VND"+ "-" + ui.values[1]+"VND");
 			}
@@ -1786,8 +1786,8 @@
 		$("#slider-range").slider({
 			range: true,
 			min: 0,
-			max: 10000.000,
-			values: [500.000, 10000.000],
+			max: 10000000,
+			values: [500000, 10000000],
 			slide: function (event, ui) {
 			  $("#amount").val( ui.values[0] +"VND" + " - " + ui.values[1]+"VND");
 			},
