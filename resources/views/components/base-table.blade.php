@@ -59,8 +59,8 @@
                                                                 {{show_money($data[$th['key']])}}
                                                             @elseif(@$th['date'])
                                                                 {{show_int_date($data[$th['key']])}}
-                                                            @elseif(@$th['img'])
-                                                                <img width="50" src="{{show_img($data[$th['key']])}}" alt="image" />
+                                                            @elseif(isset($th['img']))
+                                                                <img width="50" src="{{images_src($data[$th['key']])}}" alt="image" />
                                                             @else
                                                                 {{value_show(@$data[$th['key']])}}
                                                             @endif
@@ -71,8 +71,8 @@
                                                                 {{show_money($data[$th['key']])}}
                                                             @elseif(@$th['date'])
                                                                 {{show_int_date($obj[$th['key']])}}
-                                                            @elseif(@$th['img'])
-                                                                <img width="50" src="{{show_img($data[$th['key']])}}" alt="image" />
+                                                            @elseif(isset($th['img']))
+                                                                <img width="50" src="{{images_src($data[$th['key']])}}" alt="image" />
                                                             @else
                                                                 {{value_show(@$obj[$th['key']])}}
                                                             @endif
@@ -92,8 +92,8 @@
                                                             {{show_money(@$data[$th['key']])}}
                                                         @elseif(@$th['date'])
                                                             {{show_int_date(@$data[$th['key']])}}
-                                                        @elseif(@$th['img'])
-                                                            <img width="50" src="{{show_img(@$data[$th['key']])}}" alt="image" />
+                                                        @elseif(isset($th['img']))
+                                                            <img width="50" src="{{images_src(@$data[$th['key']])}}" alt="image" />
                                                         @else
                                                             {{value_show(@$data[$th['key']])}}
                                                         @endif
@@ -104,8 +104,8 @@
                                                             {{show_money(@$data[$th['key']])}}
                                                         @elseif(@$th['date'])
                                                             {{show_int_date(@$obj[$th['key']])}}
-                                                        @elseif(@$th['img'])
-                                                            <img width="50" src="{{show_img(@$obj[$th['key']])}}" alt="image" />
+                                                        @elseif(isset($th['img']))
+                                                            <img width="50" src="{{images_src(@$obj[$th['key']])}}" alt="image" />
                                                         @else
                                                             {{value_show(@$obj[$th['key']])}}
                                                         @endif
