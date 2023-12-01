@@ -1719,6 +1719,7 @@
 		});
 
 		$("#slider-range").slider({
+			step: 100000,
 			range: true,
 			min: 0,
 			max: 10000000,
@@ -1731,6 +1732,7 @@
 			" - " + $("#slider-range").slider("values", 1)+"VND");
 
 		$("#slider-range-offcanvas").slider({
+			step: 100000,
 			range: true,
 			min: 0,
 			max: 10000000,
@@ -1784,6 +1786,7 @@
 		});
 
 		$("#slider-range").slider({
+			step: 100000,
 			range: true,
 			min: 0,
 			max: 10000000,
