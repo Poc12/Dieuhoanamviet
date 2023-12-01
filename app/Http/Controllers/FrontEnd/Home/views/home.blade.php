@@ -166,7 +166,7 @@
                                                     </div>
                                                     <div class="tp-product-content-2 pt-15">
                                                         <div class="tp-product-tag-2">
-                                                            <a href="#">Whitetails Store</a>
+                                                            <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
                                                         <h3 class="tp-product-title-2">
                                                             <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
@@ -240,7 +240,7 @@
                         <div class="tp-shop-sidebar tp-shop-sidebar-right mr-10">
                             <!-- filter -->
                             <div class="tp-shop-widget mb-35">
-                                <h3 class="tp-shop-widget-title no-border">Price Filter</h3>
+                                <h3 class="tp-shop-widget-title no-border">Giá bán</h3>
 
                                 <div class="tp-shop-widget-content">
                                     <div class="tp-shop-widget-filter">
@@ -255,24 +255,6 @@
                                 </div>
                             </div>
                             <!-- status -->
-                            <div class="tp-shop-widget mb-50">
-                                <h3 class="tp-shop-widget-title">Product Status</h3>
-
-                                <div class="tp-shop-widget-content">
-                                    <div class="tp-shop-widget-checkbox">
-                                        <ul class="filter-items filter-checkbox">
-                                            <li class="filter-item checkbox">
-                                                <input id="on_sale" type="checkbox">
-                                                <label for="on_sale">On sale</label>
-                                            </li>
-                                            <li class="filter-item checkbox">
-                                                <input id="in_stock" type="checkbox">
-                                                <label for="in_stock">In Stock</label>
-                                            </li>
-                                        </ul><!-- .filter-items -->
-                                    </div>
-                                </div>
-                            </div>
                             <!-- categories -->
                             <div class="tp-shop-widget mb-50">
                                 <h3 class="tp-shop-widget-title">Danh mục</h3>
