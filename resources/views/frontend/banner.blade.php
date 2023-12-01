@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="col-xl-7 col-lg-6 col-md-6">
                                     <div class="tp-slider-thumb text-end">
-                                        <img src="{{images_src($item['avatar'])}}" alt="slider-img">
+                                        <img src="{{images_src($item['avatar'])}}" width="600"  alt="slider-img">
                                     </div>
                                 </div>
                             </div>
