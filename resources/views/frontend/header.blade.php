@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-7 d-none d-lg-block">
                         <div class="tp-header-search pl-70">
-                            <form method="POST" id="searchForm">
+                            <form id="searchForm">
                                 <div class="tp-header-search-wrapper d-flex align-items-center">
                                     <div class="tp-header-search-box" style="border-radius: 20%">
                                         <input name="search" type="text" placeholder="Nhập tên sản phầm cần tìm ">
