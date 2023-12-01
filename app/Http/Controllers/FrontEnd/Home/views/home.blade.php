@@ -246,10 +246,10 @@
                                     <div class="tp-shop-widget-filter">
                                         <div id="slider-range" class="mb-10"></div>
                                         <div class="tp-shop-widget-filter-info d-flex align-items-center justify-content-between">
-                                    <span class="input-range">
-                                       <input type="text" id="amount" readonly>
-                                    </span>
-                                            <button class="tp-shop-widget-filter-btn" type="button">Filter</button>
+                                        <span class="input-range">
+                                           <input type="text" id="amount" readonly>
+                                        </span>
+                                            <button class="tp-shop-widget-filter-btn" onclick="searchByPrice()" type="button">Tìm kiếm</button>
                                         </div>
                                     </div>
                                 </div>
@@ -608,4 +608,17 @@
 
 
     </main>
+@endsection
+@section('')
+    <script>
+        function searchByPrice(){
+            let amount = $('#amount').val();
+            let form = $('form');
+            if(form.length > 1) {
+                form = $('#searchForm');
+            }
+            form.append('<input type=hidden value="' + amount + '" name="price" />');
+            form.submit();
+        }
+    </script>
 @endsection
