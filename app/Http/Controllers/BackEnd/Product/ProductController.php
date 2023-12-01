@@ -113,7 +113,7 @@ class ProductController extends BaseController
 
     function before_save(&$model, $request) {
         $model->name = $request->get('name');
-        $model->status = $request->get('status', 0);
+        $model->status = $request->get('status', 1);
         $model->price = (int)$request->get('price');
         $model->sell_price = (int)$request->get('sell_price');
         $model->driver = $request->get('driver');
