@@ -27,7 +27,10 @@ class ProductController extends FrontEndController
     public function index_products($slug)
     {
         $tpl = [];
-        $product = $this->model->query()->active()->typeOfficial()->where('slug', $slug)->first();
+        $product = $this->model->query()
+            ->active()->typeOfficial()
+            ->with('category')
+            ->where('slug', $slug)->first();
         if(!$product) {
             return eView::getInstance()->notfound();
         }

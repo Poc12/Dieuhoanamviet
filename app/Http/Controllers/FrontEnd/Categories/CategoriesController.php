@@ -35,10 +35,7 @@ class CategoriesController extends FrontEndController
 
     function list_new($categories) {
           $tpl = [];
-          $description = 'Trang danh sách bài viết trên website này là nơi tổng hợp và hiển thị tất cả các bài viết trên trang web.
-           Tại đây, bạn có thể dễ dàng tìm kiếm và xem các bài viết mới nhất hoặc các bài viết theo danh mục hoặc chủ đề.
-           Chúng tôi cập nhật các bài viết đều đặn, đảm bảo rằng bạn luôn có thông tin mới nhất về những chủ đề bạn quan tâm. 
-           Trang danh sách bài viết được thiết kế để giúp bạn tiết kiệm thời gian và nỗ lực trong việc tìm kiếm thông tin bằng cách cung cấp một bộ lọc để tìm kiếm bài viết theo từ khóa, chủ đề hoặc danh mục.';
+          $description = '...';
           $this->seo()->setTitle('Danh sách bài viết');
           $this->seo()->setDescription($description);
           SEOMeta::setKeywords('Danh sách bài viết');
@@ -60,9 +57,7 @@ class CategoriesController extends FrontEndController
 
     function list_product($categories) {
         $tpl = [];
-        $description = 'Trang danh sách sản phẩm trên website này là nơi tổng hợp và hiển thị tất cả các sản phẩm được cung cấp trên trang web. Tại đây, bạn có thể dễ dàng tìm kiếm và xem các sản phẩm mới nhất hoặc các sản phẩm theo danh mục, thương hiệu hoặc chủ đề.
-        Trang danh sách sản phẩm trên website này là nơi tổng hợp và hiển thị tất cả các sản phẩm được cung cấp trên trang web. Tại đây, bạn có thể dễ dàng tìm kiếm và xem các sản phẩm mới nhất hoặc các sản phẩm theo danh mục, thương hiệu hoặc chủ đề.
-        Chúng tôi cập nhật các sản phẩm đều đặn, đảm bảo rằng bạn luôn có sự lựa chọn đa dạng và phù hợp với nhu cầu của bạn. Trang danh sách sản phẩm được thiết kế để giúp bạn tiết kiệm thời gian và nỗ lực trong việc tìm kiếm sản phẩm bằng cách cung cấp một bộ lọc để tìm kiếm sản phẩm theo từ khóa, danh mục hoặc thương hiệu.';
+        $description = '...';
         $this->seo()->setTitle('Danh sách sản phẩm');
         SEOMeta::setKeywords('Sản phẩm');
         $this->seo()->setDescription($description);
@@ -71,9 +66,9 @@ class CategoriesController extends FrontEndController
         $count = $products->count();
         $products  = $products->paginate(12);
         $allCate = $this->model->active()->where('type', Category::getInstance()->get_type_product())->get(['id', 'slug', 'name']);
-        $tpl['categories'] = $allCate;
+        $tpl['category'] = $allCate;
         $tpl['count'] = $count;
-        $tpl['products'] = $products;
+        $tpl['product'] = $products;
         return eView::getInstance()->setView($this->dir, 'listp', $tpl);
     }
 

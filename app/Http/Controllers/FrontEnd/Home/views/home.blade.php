@@ -7,92 +7,8 @@
         @include('frontend.banner',['banners' => $banners,'trending_product' => $trending_product])
         <!--Swiper Banner End-->
 
-        <!-- product category area start -->
-        <section class="tp-product-category pt-20 pb-10">
-            <div class="container">
-                <div class="row row-cols-xl-5 row-cols-lg-5 row-cols-md-4">
-                    <div class="col">
-                        <div class="tp-product-category-item text-center mb-40">
-                            <div class="tp-product-category-thumb fix">
-                                <a href="shop-category.html">
-                                    <img src="{{url('shofy/assets/img/product/category/product-cat-1.png')}}" alt="product-category">
-                                </a>
-                            </div>
-                            <div class="tp-product-category-content">
-                                <h3 class="tp-product-category-title">
-                                    <a href="shop-category.html">Tủ lạnh</a>
-                                </h3>
-                                <p>20 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="tp-product-category-item text-center mb-40">
-                            <div class="tp-product-category-thumb fix">
-                                <a href="shop-category.html">
-                                    <img src="{{url('shofy/assets/img/product/category/product-cat-2.png')}}" alt="product-category">
-                                </a>
-                            </div>
-                            <div class="tp-product-category-content">
-                                <h3 class="tp-product-category-title">
-                                    <a href="shop-category.html">Điện gia dụng</a>
-                                </h3>
-                                <p>25 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="tp-product-category-item text-center mb-40">
-                            <div class="tp-product-category-thumb fix">
-                                <a href="shop-category.html">
-                                    <img src="{{url('shofy/assets/img/product/category/product-cat-3.png')}}" alt="product-category">
-                                </a>
-                            </div>
-                            <div class="tp-product-category-content">
-                                <h3 class="tp-product-category-title">
-                                    <a href="shop-category.html">Điều hoà</a>
-                                </h3>
-                                <p>57 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="tp-product-category-item text-center mb-40">
-                            <div class="tp-product-category-thumb fix">
-                                <a href="shop-category.html">
-                                    <img src="{{url('shofy/assets/img/product/category/product-cat-4.png')}}" alt="product-category">
-                                </a>
-                            </div>
-                            <div class="tp-product-category-content">
-                                <h3 class="tp-product-category-title">
-                                    <a href="shop-category.html">Máy giặt</a>
-                                </h3>
-                                <p>44 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="tp-product-category-item text-center mb-40">
-                            <div class="tp-product-category-thumb fix">
-                                <a href="shop-category.html">
-                                    <img src="{{url('shofy/assets/img/product/category/product-cat-5.png')}}" alt="product-category">
-                                </a>
-                            </div>
-                            <div class="tp-product-category-content">
-                                <h3 class="tp-product-category-title">
-                                    <a href="shop-category.html">Tủ đông</a>
-                                </h3>
-                                <p>81 Product</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- product category area end -->
-
         <!-- shop area start -->
-        <section class="tp-shop-area pb-20">
+        <section class="tp-shop-area pt-20 pb-20">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 col-lg-8">
@@ -188,8 +104,8 @@
                                                     @foreach($product as  $item_pr)
                                                     <div class="tp-product-list-item d-md-flex">
                                                         <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix">
-                                                            <a href="#">
-                                                                <img src="{{images_src($item_pr['avatar'])}}" alt="">
+                                                            <a href="{{get_link_html($item_pr['slug'])}}">
+                                                                <img src="{{images_src($item_pr['avatar'])}}" alt="" style="max-height: 200px;">
                                                             </a>
                                                             <!-- product action -->
                                                             <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -507,9 +423,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="tp-blog-content">
-                                                    <h3 class="tp-blog-title">
+                                                    <h5 class="tp-blog-title">
                                                         <a href="{{get_link_html($item_p['slug'])}}">{{$item_p['name']}}</a>
-                                                    </h3>
+                                                    </h5>
 
                                                     <p>{!! $item_p['description'] !!}</p>
 
