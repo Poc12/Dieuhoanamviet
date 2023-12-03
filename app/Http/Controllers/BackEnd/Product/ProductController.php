@@ -7,6 +7,7 @@ use App\Http\Controllers\BaseController;
 use App\Http\Service\Media\UploadMediaService;
 use App\Models\BaseModel;
 use App\Models\Category;
+use App\Models\ProductAttibute;
 use App\Models\ProductModel as THIS;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
@@ -40,6 +41,7 @@ class ProductController extends BaseController
     function after_input(&$tpl) {
         $tpl['status'] = BaseModel::getStatus();
         $tpl['categories'] = Category::query()->typeProduct()->get()->toArray();
+        $tpl['attributeProduct'] = ProductAttibute::query()->where('product_sku',$tpl['obj']['sku'])->get()->toArray();
     }
 
     function _query_filter(&$query, Request $request)
@@ -148,6 +150,17 @@ class ProductController extends BaseController
         if ($request->file('images')){
             $images = $this->upload->upload('images', true);
             $model->avatar = $images['media']['relative_link'];
+        }
+
+        if ($request->get('attribute')){
+            ProductAttibute::query()->where('product_sku',$model->sku)->delete();
+            foreach ($request->get('attribute') as $item){
+                ProductAttibute::query()->insert([
+                    'product_sku' => $model->sku,
+                    'content' => $item
+                ]);
+            }
+            $model->updated_at = time();
         }
     }
 

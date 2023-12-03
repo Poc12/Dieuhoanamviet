@@ -133,21 +133,23 @@
                                     Thêm mới
                                 </div>
                         </button>
+                        @if(isset($attributeProduct) && count($attributeProduct))
+                            @foreach($attributeProduct as $k => $item)
+                                <div class="col-12 my-2 row" >
+                                    <div class="col-11 my-2">
+                                        <input name="attribute[]" value="{{$item['content']}}" type="text" class="form-control" placeholder="Vui lòng nhập thông tin">
+                                    </div>
+                                    <div class="col-1 my-2" onclick="remove_attr(this)">
+                                        <i class="uil-minus-circle fs-4"></i>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+
                     </div>
                     <div class="card-body form-steps">
                         <div class="tab-content p-0">
                             <div class="row" id="info">
-                                <div class="col-12 my-2 row">
-                                    <div class="col-11 my-2">
-                                        <label class="form-label">Thông số 1</label>
-                                        <input name="attribute[]" value="" type="text" class="form-control" placeholder="Vui lòng nhập thông tin">
-                                    </div>
-                                    <div class="col-1 my-2">
-                                        <a class="pt-10">
-                                            <i class="uil-minus-circle fs-4"></i>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="footer footer-action">
@@ -156,7 +158,7 @@
                                     <div class="col-sm-6"></div>
                                     <div class="col-sm-6">
                                         <div class="sm-end d-none d-sm-block text-end">
-                                            <button id="send_form_input_draft" type="button" class="btn btn-sm btn-danger btn-load send-f">
+                                            <button onclick="_POST_FORM('#info_user', '{{route($router_current_name, ['cmd' => 'ajax_save', 'draft' => true])}}')" type="button" class="btn btn-sm btn-danger btn-load send-f">
                                                 <div class="d-flex align-items-center">
                                                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"> <path d="M7 3V6.4C7 6.96005 7 7.24008 7.10899 7.45399C7.20487 7.64215 7.35785 7.79513 7.54601 7.89101C7.75992 8 8.03995 8 8.6 8H15.4C15.9601 8 16.2401 8 16.454 7.89101C16.6422 7.79513 16.7951 7.64215 16.891 7.45399C17 7.24008 17 6.96005 17 6.4V4M17 21V14.6C17 14.0399 17 13.7599 16.891 13.546C16.7951 13.3578 16.6422 13.2049 16.454 13.109C16.2401 13 15.9601 13 15.4 13H8.6C8.03995 13 7.75992 13 7.54601 13.109C7.35785 13.2049 7.20487 13.3578 7.10899 13.546C7 13.7599 7 14.0399 7 14.6V21M21 9.32548V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H14.6745C15.1637 3 15.4083 3 15.6385 3.05526C15.8425 3.10425 16.0376 3.18506 16.2166 3.29472C16.4184 3.4184 16.5914 3.59135 16.9373 3.93726L20.0627 7.06274C20.4086 7.40865 20.5816 7.5816 20.7053 7.78343C20.8149 7.96237 20.8957 8.15746 20.9447 8.36154C21 8.59171 21 8.8363 21 9.32548Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                                                     <div class="flex-grow-1 font-15 ms-2 text-white">
@@ -164,7 +166,7 @@
                                                     </div>
                                                 </div>
                                             </button>
-                                            <button id="send_form_input" type="button" class="btn btn-sm btn-success btn-load send-f">
+                                            <button onclick="_POST_FORM('#info_user', '{{route($router_current_name, ['cmd' => 'ajax_save'])}}')" type="button" class="btn btn-sm btn-success btn-load send-f">
                                                 <div class="d-flex align-items-center">
                                                     <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_iconCarrier"> <path d="M7 3V6.4C7 6.96005 7 7.24008 7.10899 7.45399C7.20487 7.64215 7.35785 7.79513 7.54601 7.89101C7.75992 8 8.03995 8 8.6 8H15.4C15.9601 8 16.2401 8 16.454 7.89101C16.6422 7.79513 16.7951 7.64215 16.891 7.45399C17 7.24008 17 6.96005 17 6.4V4M17 21V14.6C17 14.0399 17 13.7599 16.891 13.546C16.7951 13.3578 16.6422 13.2049 16.454 13.109C16.2401 13 15.9601 13 15.4 13H8.6C8.03995 13 7.75992 13 7.54601 13.109C7.35785 13.2049 7.20487 13.3578 7.10899 13.546C7 13.7599 7 14.0399 7 14.6V21M21 9.32548V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3H14.6745C15.1637 3 15.4083 3 15.6385 3.05526C15.8425 3.10425 16.0376 3.18506 16.2166 3.29472C16.4184 3.4184 16.5914 3.59135 16.9373 3.93726L20.0627 7.06274C20.4086 7.40865 20.5816 7.5816 20.7053 7.78343C20.8149 7.96237 20.8957 8.15746 20.9447 8.36154C21 8.59171 21 8.8363 21 9.32548Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                                                     <div class="flex-grow-1 font-15 ms-2 text-white">
@@ -239,14 +241,6 @@
 
 @section('JS')
     <script>
-        $('#send_form_input_draft').click(function () {
-            return _POST_FORM('#info_user', '{{route($router_current_name, ['cmd' => 'ajax_save', 'draft' => true])}}')
-        })
-
-        $('#send_form_input').click(function () {
-            return _POST_FORM('#info_user', '{{route($router_current_name, ['cmd' => 'ajax_save'])}}')
-        })
-
         INIDROPIFY()
 
         $('#upload_media').change(function (){
@@ -289,24 +283,23 @@
                 }})
         })
         INIT_TINYMCE()
-
-        let a = 1;
         function add_attribute(){
-            a++
             let html = `
-               <div class="col-12 my-2 row">
+               <div class="col-12 my-2 row" id="attribute">
                                     <div class="col-11 my-2">
-                                        <label class="form-label">Thông số 1</label>
                                         <input name="attribute[]" value="" type="text" class="form-control" placeholder="Vui lòng nhập thông tin">
                                     </div>
-                                    <div class="col-1 my-2">
-                                        <a class="pt-10">
-                                            <i class="uil-minus-circle fs-4"></i>
-                                        </a>
+                                    <div class="col-1 my-2" onclick="remove_attr(this)">
+                                       <i class="uil-minus-circle fs-4"></i>
                                     </div>
                </div>
             `
-            $('#info').append()
+            $('#info').append(html)
+        }
+
+        function remove_attr(dom) {
+            let doc = $(dom).parent();
+            doc.remove();
         }
     </script>
 @endsection
