@@ -10,6 +10,7 @@ use App\Models\Comment;
 use App\Models\Customer;
 use App\Models\CustomerLikeProduct;
 use App\Models\Post;
+use App\Models\ProductAttibute;
 use App\Models\ProductModel;
 use App\Models\User;
 use Artesaos\SEOTools\Facades\SEOMeta;
@@ -27,9 +28,22 @@ class ProductController extends FrontEndController
     public function index_products($slug)
     {
         $tpl = [];
-        $product = $this->model->query()->active()->typeOfficial()->where('slug', $slug)->first();
+        $product = $this->model->query()
+            ->active()->typeOfficial()
+            ->with('category')
+            ->where('slug', $slug)->first();
         if(!$product) {
             return eView::getInstance()->notfound();
+        }
+        $trending_product= ProductModel::query()->with('category')->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
+        $product_attr = [];
+        $product_attribute = ProductAttibute::query()->where('product_sku',$product['sku'])->pluck('content')->toArray();
+        foreach ($product_attribute as $item){
+            $item_ = explode(":", $item);
+            $product_attr[] = [
+                'name' => @$item_[0],
+                'value' => @$item_[1]
+            ];
         }
         $this->seo()->setTitle('Chi tiết sản phẩm '.$product['name']);
         SEOMeta::setKeywords($product['name']);
@@ -38,8 +52,10 @@ class ProductController extends FrontEndController
         $comments = Comment::query()->where('product_id', $product['id'])->get();
         $product_new = $this->model->query()->active()->typeOfficial()->limit(3)->get();
         $tpl['product_new'] = $product_new;
+        $tpl['product_attribute'] = $product_attr;
         $tpl['product'] = $product;
         $tpl['comments'] = $comments;
+        $tpl['trending_product'] = $trending_product;
         return eView::getInstance()->setView($this->dir, 'detail', $tpl);
     }
 

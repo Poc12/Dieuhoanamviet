@@ -17,10 +17,17 @@ class ProductModel extends BaseModel
         return $this->HasMany(CustomerLikeProduct::class, 'product_id', 'id');
     }
 
+    function attributeProduct(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->HasMany(ProductAttibute::class, 'product_sku', 'sku');
+    }
+
     function user_like(): \Illuminate\Database\Eloquent\Relations\Hasone
     {
         return $this->Hasone(CustomerLikeProduct::class, 'product_id', 'id')->where('customer_id', auth()->id());
     }
+
+
 
     const TYPE_DRAFT = 0;
     const TYPE_OFFICIAL = 1;
