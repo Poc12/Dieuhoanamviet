@@ -314,7 +314,7 @@
                                                         <a href="shop.html">Fast Charger</a>
                                                     </div>
                                                     <h3 class="tp-product-title">
-                                                        <a href="product-details.html">
+                                                        <a href="{{get_link_product($item['slug'])}}">
                                                            {{$item['name']}}
                                                         </a>
                                                     </h3>
