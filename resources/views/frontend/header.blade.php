@@ -125,17 +125,12 @@
                                                     <ul class="mega-menu tp-submenu">
                                                         @if(isset($item['product']))
                                                             <li>
-                                                                <a href="shop.html" class="mega-menu-title">Featured</a>
                                                                 <ul>
-                                                                    <li>
-                                                                        <a href="shop.html">New Arrivals</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="shop.html">Best Seller</a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="shop.html">Top Rated</a>
-                                                                    </li>
+                                                                @foreach($item['product'] as $item_pro)
+                                                                        <li>
+                                                                            <a href="{{get_link_product($item_pro['slug'])}}">{{$item_pro['name']}}</a>
+                                                                        </li>
+                                                                @endforeach
                                                                 </ul>
                                                             </li>
                                                         @endif
