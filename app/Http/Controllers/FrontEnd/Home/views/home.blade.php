@@ -203,10 +203,10 @@
                         <div class="tp-banner-item tp-banner-height p-relative mb-30 z-index-1 fix">
                             <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('shofy/assets/img/product/banner/product-banner-1.jpg')}}"></div>
                             <div class="tp-banner-content">
-                                <span>Sale 20% off all store</span>
-                                <h3 class="tp-banner-title">
-                                    <a href="product-details.html">Smartphone <br> BLU G91 Pro 2022</a>
-                                </h3>
+                                <span>Giao hàng nhanh chóng</span>
+                                <h4 class="tp-banner-title">
+                                    <a href="product-details.html">Cam kết chất lượng sản phẩm </a>
+                                </h4>
                                 <div class="tp-banner-btn">
                                     <a href="{{$info['zalo']}}" class="tp-link-btn">Liên hệ
                                         <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">

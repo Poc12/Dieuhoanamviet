@@ -21,13 +21,13 @@ class PostController extends FrontEndController
     public function index_post($slug)
     {
         $tpl = [];
-        $post = $this->model->active()->typeOfficial()->with('user')->where('slug', $slug)->active()->first();
+        $post = $this->model->active()->typeOfficial()->with(['user','category'])->where('slug', $slug)->active()->first();
         $where = [
            'post_id' => @$post['id']
         ];
         $check = 0;
         if(!$post) {
-            $post = Statics::query()->active()->with('user')->where('slug', $slug)->active()->first();
+            $post = Statics::query()->active()->with(['user','category'])->where('slug', $slug)->active()->first();
             $where = [
                 'static_id' => @$post['id']
             ];
