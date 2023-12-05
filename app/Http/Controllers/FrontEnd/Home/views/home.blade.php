@@ -84,9 +84,9 @@
                                                         <div class="tp-product-tag-2">
                                                             <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
-                                                        <h3 class="tp-product-title-2">
+                                                        <h4 class="tp-product-title-2">
                                                             <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
-                                                        </h3>
+                                                        </h4>
                                                         <div class="tp-product-price-wrapper-2">
                                                             <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>
                                                             <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>
@@ -196,17 +196,17 @@
         <!-- shop area end -->
 
         <!-- banner area start -->
-        <section class="tp-banner-area pb-20">
+        <section class="tp-banner-area pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-7">
                         <div class="tp-banner-item tp-banner-height p-relative mb-30 z-index-1 fix">
                             <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('shofy/assets/img/product/banner/product-banner-1.jpg')}}"></div>
                             <div class="tp-banner-content">
-                                <span>Sale 20% off all store</span>
-                                <h3 class="tp-banner-title">
-                                    <a href="product-details.html">Smartphone <br> BLU G91 Pro 2022</a>
-                                </h3>
+                                <span>Giao hàng nhanh chóng</span>
+                                <h4 class="tp-banner-title">
+                                    <a href="product-details.html">Cam kết chất lượng sản phẩm </a>
+                                </h4>
                                 <div class="tp-banner-btn">
                                     <a href="{{$info['zalo']}}" class="tp-link-btn">Liên hệ
                                         <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +236,7 @@
 
 
         <!-- product arrival area start -->
-        <section class="tp-product-arrival-area pb-20">
+        <section class="tp-product-arrival-area pb-5">
             <div class="container">
                 <div class="row align-items-end">
                     <div class="col-xl-5 col-sm-6">
@@ -302,8 +302,7 @@
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.56975 8.05226C3.42975 12.1613 6.56275 14.6043 9.99975 14.6053C13.4368 14.6043 16.5697 12.1613 18.4298 8.05226C16.5697 3.94426 13.4368 1.50126 9.99975 1.50026C6.56375 1.50126 3.42975 3.94426 1.56975 8.05226ZM10.0017 16.1053H9.99775H9.99675C5.86075 16.1023 2.14675 13.2033 0.06075 8.34826C-0.02025 8.15926 -0.02025 7.94526 0.06075 7.75626C2.14675 2.90226 5.86175 0.00326172 9.99675 0.000261719C9.99875 -0.000738281 9.99875 -0.000738281 9.99975 0.000261719C10.0017 -0.000738281 10.0017 -0.000738281 10.0028 0.000261719C14.1388 0.00326172 17.8527 2.90226 19.9387 7.75626C20.0208 7.94526 20.0208 8.15926 19.9387 8.34826C17.8537 13.2033 14.1388 16.1023 10.0028 16.1053H10.0017Z" fill="currentColor"/>
                                                                     </g>
                                                                 </svg>
-
-                                                                <span class="tp-product-tooltip">Xem </span>
+                                                                <span class="tp-product-tooltip">Xem</span>
                                                             </button>
                                                         </div>
                                                     </div>
@@ -311,7 +310,7 @@
                                                 <!-- product content -->
                                                 <div class="tp-product-content">
                                                     <div class="tp-product-category">
-                                                        <a href="shop.html">Fast Charger</a>
+                                                        <a href="{{get_link_cate($item->category['slug'])}}">{{@$item->category['name']}}</a>
                                                     </div>
                                                     <h3 class="tp-product-title">
                                                         <a href="{{get_link_product($item['slug'])}}">
