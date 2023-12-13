@@ -201,7 +201,7 @@
                 <div class="row">
                     <div class="col-xl-8 col-lg-7">
                         <div class="tp-banner-item tp-banner-height p-relative mb-30 z-index-1 fix">
-                            <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('shofy/assets/img/product/banner/product-banner-1.jpg')}}"></div>
+                            <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('assets/images/banner2.png')}}"></div>
                             <div class="tp-banner-content">
                                 <span>Giao hàng nhanh chóng</span>
                                 <h4 class="tp-banner-title">
