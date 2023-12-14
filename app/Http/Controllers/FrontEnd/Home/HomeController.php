@@ -36,8 +36,9 @@ class HomeController extends FrontEndController
             ->typeOfficial()->active()->whereNotIn('id', $pluck)->orderBy('stt')->get();
         $all_product = ProductModel::query()
             ->typeOfficial()
-            ->active()->paginate($this->per_page);
-        $all_product = $this->fillter_query($request,$all_product);
+            ->active();
+        $this->fillter_query($all_product,$request);
+        $all_product = $all_product->paginate($this->per_page);
         $all_category = Category::query()->typeProduct()->active()->orderByDesc('created_at')->get();
         $posts = Post::query()->typeOfficial()->active()->limit(10)->get();
         $videos = Video::query()->active()->limit(10)->get();
@@ -54,11 +55,11 @@ class HomeController extends FrontEndController
         return eView::getInstance()->setView($this->dir, 'home', $tpl);
     }
 
-    function fillter_query(Request $request,&$list){
+    public function fillter_query(&$list,Request $request){
         if ($request->get('search')){
             $list = $list->where('name','LIKE','%'.$request->get('search').'%');
         }
-        if ($request->get('search')){
+        if ($request->get('price')){
             $list = $list->where('name','LIKE','%'.$request->get('search').'%');
         }
     }
