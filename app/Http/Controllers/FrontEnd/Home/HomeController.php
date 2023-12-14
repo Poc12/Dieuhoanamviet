@@ -60,7 +60,10 @@ class HomeController extends FrontEndController
             $list = $list->where('name','LIKE','%'.$request->get('search').'%');
         }
         if ($request->get('price')){
-            $list = $list->where('name','LIKE','%'.$request->get('search').'%');
+            $price = explode('-',$request->get('price'));
+            $form = isset($price[0]) ? (int)$price[0] : 0;
+            $to = isset($price[1]) ? (int)$price[1] : 0;
+            $list = $list->whereBetween('sell_price',[$form,$to]);
         }
     }
 
