@@ -452,7 +452,7 @@
 
     </main>
 @endsection
-@section('')
+@section('JS')
     <script>
         function searchByPrice(){
             let amount = $('#amount').val();
