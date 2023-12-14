@@ -220,7 +220,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="tp-banner-item tp-banner-item-sm tp-banner-height p-relative mb-30 z-index-1 fix">
-                            <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('shofy/assets/img/product/banner/product-banner-2.jpg')}}"></div>
+                            <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('assets/images/banner2.png')}}"></div>
                             <div class="tp-banner-content">
                                 <h3 class="tp-banner-title">
                                     <a href="product-details.html">HyperX Cloud II <br> Wireless</a>
