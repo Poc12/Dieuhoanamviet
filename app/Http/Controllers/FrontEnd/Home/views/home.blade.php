@@ -452,7 +452,7 @@
 
     </main>
 @endsection
-@section('JS')
+@push('JS')
     <script>
         function searchByPrice(){
             let amount = $('#amount').val();
@@ -464,4 +464,4 @@
             form.submit();
         }
     </script>
-@endsection
+@endpush
