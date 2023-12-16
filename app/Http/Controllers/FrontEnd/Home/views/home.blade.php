@@ -155,21 +155,21 @@
                     <div class="col-xl-3 col-lg-4">
                         <div class="tp-shop-sidebar tp-shop-sidebar-right mr-10">
                             <!-- filter -->
-                            <div class="tp-shop-widget mb-35">
-                                <h3 class="tp-shop-widget-title no-border">Giá bán</h3>
+{{--                            <div class="tp-shop-widget mb-35">--}}
+{{--                                <h3 class="tp-shop-widget-title no-border">Giá bán</h3>--}}
 
-                                <div class="tp-shop-widget-content">
-                                    <div class="tp-shop-widget-filter">
-                                        <div id="slider-range" class="mb-10"></div>
-                                        <div class="tp-shop-widget-filter-info d-flex align-items-center justify-content-between">
-                                        <span class="input-range">
-                                           <input type="text" id="amount" readonly>
-                                        </span>
-                                            <button class="tp-shop-widget-filter-btn" onclick="searchByPrice()" type="button">Tìm kiếm</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                <div class="tp-shop-widget-content">--}}
+{{--                                    <div class="tp-shop-widget-filter">--}}
+{{--                                        <div id="slider-range" class="mb-10"></div>--}}
+{{--                                        <div class="tp-shop-widget-filter-info d-flex align-items-center justify-content-between">--}}
+{{--                                        <span class="input-range">--}}
+{{--                                           <input type="text" id="amount" readonly>--}}
+{{--                                        </span>--}}
+{{--                                            <button class="tp-shop-widget-filter-btn" onclick="searchByPrice()" type="button">Tìm kiếm</button>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <!-- status -->
                             <!-- categories -->
                             <div class="tp-shop-widget mb-50">

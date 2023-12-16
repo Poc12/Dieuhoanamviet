@@ -290,7 +290,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
-  line-height: 26px;
+  line-height: 20px;
 }
 
 a {
@@ -7271,7 +7271,7 @@ body .ui-tooltip {
 }
 .main-menu.menu-style-1 > nav > ul > li > a {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--tp-common-black);
   padding: 11px 0;
 }
