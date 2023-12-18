@@ -30,7 +30,7 @@
                            </span>
                         </div>
                         <div class="tp-map-iframe">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d5236.029445932209!2d106.50533749485473!3d20.971632111157803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zVGjDtG4gRMaw4buhbmcgVGjDoWkgVHJ1bmcsIFjDoyBQaMO6YyBUaMOgbmggQSwgSHV54buHbiBLaW0gVGjDoG5oLCBU4buJbmggSOG6o2kgRMawxqFuZw!5e0!3m2!1svi!2s!4v1702896143023!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.6000581172575!2d106.5065018!3d20.968570399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313581b778ecf2c1%3A0x195ae231776cae42!2zQ8O0bmcgdHkgVE5ISCBUxrAgduG6pW4gdGhp4bq_dCBr4bq_IHbDoCBUaMawxqFuZyBt4bqhaSBk4buLY2ggduG7pSBOYW0gVmnhu4d0!5e0!3m2!1svi!2s!4v1702896416407!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -46,6 +46,7 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-5">
                         <div class="tp-contact-info-wrapper">
+                            <h5 class="tp-contact-title">Công ty TNHH Tư vấn thiết kế và Thương mại dịch vụ Nam Việt</h5>
                             <div class="tp-contact-info-item">
                                 <div class="tp-contact-info-icon">
                                  <span>
@@ -94,7 +95,7 @@
                     </div>
                     <div class="col-xl-7 col-lg-7">
                         <div class="tp-contact-wrapper">
-                            <h3 class="tp-contact-title">Gửi yêu cầu của bạn</h3>
+                            <h5 class="tp-contact-title">Gửi yêu cầu của bạn</h5>
 
                             <div class="tp-contact-form">
                                 <form id="form_contact" method="POST">
