@@ -92,10 +92,13 @@
                                                             href="javascript:void(0);"
                                                             >{{$item_pr['name']}}</a>
                                                         </h4>
-{{--                                                        <div class="tp-product-price-wrapper-2">--}}
+                                                        <div class="tp-product-price-wrapper-2 mt-4">
+                                                            <div class="tp-blog-btn">
+                                                                <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                            </div>
 {{--                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
 {{--                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
-{{--                                                        </div>--}}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,20 +130,19 @@
                                                         </div>
                                                         <div class="tp-product-list-content">
                                                             <div class="tp-product-content-2 pt-15">
-                                                                <div class="tp-product-tag-2">
-                                                                    <a href="#">Shirt, </a>
-                                                                    <a href="#">Branded</a>
-                                                                </div>
                                                                 <h3 class="tp-product-title-2">
                                                                     <a
 {{--                                                                    href="{{get_link_product($item_pr['slug'])}}"--}}
                                                                     href="javascript:void(0);"
                                                                     >{{$item_pr['name']}}</a>
                                                                 </h3>
-{{--                                                                <div class="tp-product-price-wrapper-2">--}}
+                                                                <div class="tp-product-price-wrapper-2">
+                                                                    <div class="tp-blog-btn">
+                                                                        <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                                    </div>
 {{--                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
 {{--                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
-{{--                                                                </div>--}}
+                                                                </div>
                                                                 <h5 class="title sp-line-2">{!! $item_pr['description'] !!}</h5>
                                                                 <div class="tp-product-list-add-to-cart">
                                                                     <button class="tp-product-list-add-to-cart-btn">Thêm vào giỏ</button>
@@ -318,10 +320,13 @@
                                                         >{{$item['name']}}
                                                         </a>
                                                     </h3>
-{{--                                                    <div class="tp-product-price-wrapper">--}}
+                                                    <div class="tp-product-price-wrapper">
+                                                        <div class="tp-blog-btn">
+                                                            <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                        </div>
 {{--                                                        <span class="tp-product-price old-price">{{format_money_vnd($item['price'])}}</span>--}}
 {{--                                                        <span class="tp-product-price new-price">{{format_money_vnd($item['price_sell'])}}</span>--}}
-{{--                                                    </div>--}}
+                                                    </div>
                                                 </div>
                                             </div>
                                        @endforeach
@@ -359,11 +364,6 @@
                                             </div>
                                             <div class="col-xl-6 col-lg-6">
                                                 <div class="tp-product-banner-thumb-wrapper p-relative">
-                                                    <div class="tp-product-banner-thumb-shape">
-                                                        <span class="tp-product-banner-thumb-gradient"></span>
-                                                        <img class="tp-offer-shape"  src="{{url('shofy/assets/img/banner/banner-slider-offer.png')}}" alt="">
-                                                    </div>
-
                                                     <div class="tp-product-banner-thumb text-end p-relative z-index-1">
                                                         <img src="{{images_src($item['avatar'])}}" width="200" alt="">
                                                     </div>
@@ -432,11 +432,11 @@
                                                         <a href="{{get_link_html($item_p['slug'])}}" class="tp-btn-2 tp-btn-border-2">
                                                             Đọc thêm
                                                             <span>
-                                                     <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M16 7.5L1 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                        <path d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                     </svg>
-                                                  </span>
+                                                             <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M16 7.5L1 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M9.9502 1.47541L16.0002 7.49941L9.9502 13.5244" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                             </svg>
+                                                            </span>
                                                         </a>
                                                     </div>
                                                 </div>
