@@ -98,7 +98,7 @@
                             <h5 class="tp-contact-title">Gửi yêu cầu của bạn</h5>
 
                             <div class="tp-contact-form">
-                                <form id="form_contact" method="POST">
+                                <form id="form_contact">
                                     <div class="tp-contact-input-wrapper">
                                         <div class="tp-contact-input-box">
                                             <div class="tp-contact-input">
@@ -134,7 +134,7 @@
                                         </div>
                                     </div>
                                     <div class="tp-contact-btn">
-                                        <button id="send_form_contact" type="submit">Gửi</button>
+                                        <button id="send_form_contact" type="button">Gửi</button>
                                     </div>
                                 </form>
                                 <p class="ajax-response"></p>
@@ -151,10 +151,10 @@
 @endsection
 
 
-@section('JS')
+@push('JS')
   <script>
       $('#send_form_contact').click(function () {
           return _POST_FORM('#form_contact', '{{route($router_current_name, ['cmd' => 'ajax_save'])}}')
       })
   </script>
-@endsection
+@endpush
