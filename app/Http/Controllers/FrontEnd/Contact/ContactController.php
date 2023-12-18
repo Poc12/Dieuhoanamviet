@@ -55,14 +55,14 @@ class ContactController extends FrontEndController
 
     function after_save($model){
         $data = [
-            'subject' => 'Thông báo khách hàng quan tâm từ Bookstore.',
+            'subject' => 'Thông báo khách hàng quan tâm từ dieuhoanamviet.com.',
             'template' => 'mail.base',
             'name' => $model->name,
             'created_at' => $model->created_at,
             'phone' => $model->phone,
             'content' => $model->content,
         ];
-        Mail::to('conghd.139@gmail.com')->cc('bookstorekids1@gmail.com')->send(new SendEmail($data));
+        Mail::to('conghd.139@gmail.com')->cc('namvietdtc.ltd@gmail.com')->send(new SendEmail($data));
     }
 
     function result_response(&$result, $model) {
