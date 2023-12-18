@@ -359,11 +359,6 @@
                                             </div>
                                             <div class="col-xl-6 col-lg-6">
                                                 <div class="tp-product-banner-thumb-wrapper p-relative">
-                                                    <div class="tp-product-banner-thumb-shape">
-                                                        <span class="tp-product-banner-thumb-gradient"></span>
-                                                        <img class="tp-offer-shape"  src="{{url('shofy/assets/img/banner/banner-slider-offer.png')}}" alt="">
-                                                    </div>
-
                                                     <div class="tp-product-banner-thumb text-end p-relative z-index-1">
                                                         <img src="{{images_src($item['avatar'])}}" width="200" alt="">
                                                     </div>
