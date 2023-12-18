@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::any('/', [HomeController::class, 'index'])->name('fe.home');
-Route::any('/contact/{cmd?}', [ContactController::class, 'index'])->name('fe.contact');
+Route::any('/lien-he/{cmd?}', [ContactController::class, 'index'])->name('fe.contact');
 Route::any('/subscriber/{cmd?}', [SubscriberController::class, 'index'])->name('fe.subscriber');
 Route::any('/{cmd?}.html', [PostController::class, 'index_post'])->name('fe.post');
 Route::any('/{cmd?}.c', [CategoriesController::class, 'check_list'])->name('fe.category');
