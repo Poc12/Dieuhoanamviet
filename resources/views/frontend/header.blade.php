@@ -184,6 +184,7 @@
                                                 @endif
                                             @endforeach
                                         @endif
+                                        <li><a href="{{route('fe.contact')}}">LIÊN HỆ BÁO GIÁ</a></li>
                                     </ul>
                                 </nav>
                             </div>
