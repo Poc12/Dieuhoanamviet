@@ -1208,8 +1208,8 @@ div.demo img {
   font-weight: 500;
   font-size: 13px;
   color: var(--tp-common-black);
-  background-color: transparent;
-  padding: 8px 17px;
+  background-color: #f48b8b;
+  padding: 5px 20px;
 }
 .tp-btn-border-2 span {
   margin-left: 3px;
