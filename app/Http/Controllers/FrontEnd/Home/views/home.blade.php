@@ -365,7 +365,7 @@
                                                     </div>
 
                                                     <div class="tp-product-banner-thumb text-end p-relative z-index-1">
-                                                        <img src="{{images_src($item['avatar'])}}" width="400" alt="">
+                                                        <img src="{{images_src($item['avatar'])}}" width="200" alt="">
                                                     </div>
                                                 </div>
                                             </div>
