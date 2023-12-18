@@ -77,15 +77,18 @@
                                                     </div>
                                                     <div class="tp-product-content-2 pt-15">
                                                         <div class="tp-product-tag-2">
-                                                            <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
+                                                            <a class="font-12 text-primary" href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
                                                         <h3 class="tp-product-title-2">
-                                                            <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
+                                                            <a
+                                                               {{--href="{{get_link_product($item_pr['slug'])}}"--}}
+                                                               href="javascript:void(0);"
+                                                            >{{$item_pr['name']}}</a>
                                                         </h3>
-                                                        <div class="tp-product-price-wrapper-2">
-                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>
-                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>
-                                                        </div>
+{{--                                                        <div class="tp-product-price-wrapper-2">--}}
+{{--                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
+{{--                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
+{{--                                                        </div>--}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -117,17 +120,16 @@
                                                         </div>
                                                         <div class="tp-product-list-content">
                                                             <div class="tp-product-content-2 pt-15">
-                                                                <div class="tp-product-tag-2">
-                                                                    <a href="#">Shirt, </a>
-                                                                    <a href="#">Branded</a>
-                                                                </div>
                                                                 <h3 class="tp-product-title-2">
-                                                                    <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
+                                                                    <a
+                                                                    {{-- href="{{get_link_product($item_pr['slug'])}}"--}}
+                                                                    href="javascript:void(0);"
+                                                                    >{{$item_pr['name']}}</a>
                                                                 </h3>
-                                                                <div class="tp-product-price-wrapper-2">
-                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>
-                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>
-                                                                </div>
+{{--                                                                <div class="tp-product-price-wrapper-2">--}}
+{{--                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
+{{--                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
+{{--                                                                </div>--}}
                                                                 <h5 class="title sp-line-2">{!! $item_pr['description'] !!}</h5>
                                                                 <div class="tp-product-list-add-to-cart">
                                                                     <button class="tp-product-list-add-to-cart-btn">Thêm vào giỏ</button>
@@ -150,21 +152,21 @@
                 <div class="col-xl-3 col-lg-4">
                     <div class="tp-shop-sidebar tp-shop-sidebar-right mr-10">
                         <!-- filter -->
-                        <div class="tp-shop-widget mb-35">
-                            <h3 class="tp-shop-widget-title no-border">Giá bán</h3>
+{{--                        <div class="tp-shop-widget mb-35">--}}
+{{--                            <h3 class="tp-shop-widget-title no-border">Giá bán</h3>--}}
 
-                            <div class="tp-shop-widget-content">
-                                <div class="tp-shop-widget-filter">
-                                    <div id="slider-range" class="mb-10"></div>
-                                    <div class="tp-shop-widget-filter-info d-flex align-items-center justify-content-between">
-                                        <span class="input-range">
-                                           <input type="text" id="amount" readonly>
-                                        </span>
-                                        <button class="tp-shop-widget-filter-btn" onclick="searchByPrice()" type="button">Tìm kiếm</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                            <div class="tp-shop-widget-content">--}}
+{{--                                <div class="tp-shop-widget-filter">--}}
+{{--                                    <div id="slider-range" class="mb-10"></div>--}}
+{{--                                    <div class="tp-shop-widget-filter-info d-flex align-items-center justify-content-between">--}}
+{{--                                        <span class="input-range">--}}
+{{--                                           <input type="text" id="amount" readonly>--}}
+{{--                                        </span>--}}
+{{--                                        <button class="tp-shop-widget-filter-btn" onclick="searchByPrice()" type="button">Tìm kiếm</button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <!-- status -->
                         <!-- categories -->
                         <div class="tp-shop-widget mb-50">

@@ -53,8 +53,10 @@
                                                 <div class="col-xl-3 col-md-4 col-sm-4 p-1">
                                                 <div class="tp-product-item-2 mb-40">
                                                     <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img">
-                                                        <a href="{{get_link_product($item_pr['slug'])}}">
-                                                            <img  alt="" src="{{images_src($item_pr['avatar'])}}">
+                                                        <a
+{{--                                                                href="{{get_link_product($item_pr['slug'])}}"--}}
+                                                                href="javascript:void(0);"
+                                                        ><img  alt="" src="{{images_src($item_pr['avatar'])}}">
                                                         </a>
                                                         <!-- product action -->
                                                         <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -85,12 +87,15 @@
                                                             <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
                                                         <h4 class="tp-product-title-2">
-                                                            <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
+                                                            <a
+{{--                                                             href="{{get_link_product($item_pr['slug'])}}"--}}
+                                                            href="javascript:void(0);"
+                                                            >{{$item_pr['name']}}</a>
                                                         </h4>
-                                                        <div class="tp-product-price-wrapper-2">
-                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>
-                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>
-                                                        </div>
+{{--                                                        <div class="tp-product-price-wrapper-2">--}}
+{{--                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
+{{--                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
+{{--                                                        </div>--}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -127,12 +132,15 @@
                                                                     <a href="#">Branded</a>
                                                                 </div>
                                                                 <h3 class="tp-product-title-2">
-                                                                    <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
+                                                                    <a
+{{--                                                                    href="{{get_link_product($item_pr['slug'])}}"--}}
+                                                                    href="javascript:void(0);"
+                                                                    >{{$item_pr['name']}}</a>
                                                                 </h3>
-                                                                <div class="tp-product-price-wrapper-2">
-                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>
-                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>
-                                                                </div>
+{{--                                                                <div class="tp-product-price-wrapper-2">--}}
+{{--                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
+{{--                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
+{{--                                                                </div>--}}
                                                                 <h5 class="title sp-line-2">{!! $item_pr['description'] !!}</h5>
                                                                 <div class="tp-product-list-add-to-cart">
                                                                     <button class="tp-product-list-add-to-cart-btn">Thêm vào giỏ</button>
@@ -235,7 +243,7 @@
                 <div class="row align-items-end">
                     <div class="col-xl-5 col-sm-6">
                         <div class="tp-section-title-wrapper mb-40">
-                            <h4 class="tp-section-title"> Sản Phẩm HOT</h4>
+                            <h4 class="tp-section-title">SẢN PHẨM KHUYẾN MẠI</h4>
                         </div>
                     </div>
                     <div class="col-xl-7 col-sm-6">
@@ -264,15 +272,12 @@
                                        @foreach($trending_product as $item)
                                             <div class="tp-product-item transition-3 mb-25 swiper-slide">
                                                 <div class="tp-product-thumb p-relative fix m-img">
-                                                    <a href="{{get_link_product($item['slug'])}}">
+                                                    <a
+{{--                                                            href="{{get_link_product($item['slug'])}}"--}}
+                                                            href="javascript:void(0);"
+                                                    >
                                                         <img src="{{images_src($item['avatar'])}}" alt="">
                                                     </a>
-
-                                                    <!-- product badge -->
-                                                    <div class="tp-product-badge">
-                                                        <span class="product-trending">Trending</span>
-                                                    </div>
-
                                                     <!-- product action -->
                                                     <div class="tp-product-action">
                                                         <div class="tp-product-action-item d-flex flex-column">
@@ -307,19 +312,20 @@
                                                         <a href="{{get_link_cate($item->category['slug'])}}">{{@$item->category['name']}}</a>
                                                     </div>
                                                     <h3 class="tp-product-title">
-                                                        <a href="{{get_link_product($item['slug'])}}">
-                                                           {{$item['name']}}
+                                                        <a
+{{--                                                                href="{{get_link_product($item['slug'])}}"--}}
+                                                                href="javascript:void(0);"
+                                                        >{{$item['name']}}
                                                         </a>
                                                     </h3>
-                                                    <div class="tp-product-price-wrapper">
-                                                        <span class="tp-product-price old-price">{{format_money_vnd($item['price'])}}</span>
-                                                        <span class="tp-product-price new-price">{{format_money_vnd($item['price_sell'])}}</span>
-                                                    </div>
+{{--                                                    <div class="tp-product-price-wrapper">--}}
+{{--                                                        <span class="tp-product-price old-price">{{format_money_vnd($item['price'])}}</span>--}}
+{{--                                                        <span class="tp-product-price new-price">{{format_money_vnd($item['price_sell'])}}</span>--}}
+{{--                                                    </div>--}}
                                                 </div>
                                             </div>
                                        @endforeach
                                     @endif
-
                                 </div>
                             </div>
                         </div>
@@ -342,10 +348,10 @@
                                             <div class="col-xl-6 col-lg-6">
                                                 <div class="tp-product-banner-content p-relative z-index-1">
                                                     <h5 class="tp-product-banner-title">{{$item['name']}}</h5>
-                                                    <div class="tp-product-banner-price mb-40">
-                                                        <span class="old-price">{{format_money_vnd($item['price'])}}</span>
-                                                        <p class="new-price">{{format_money_vnd($item['price_sell'])}}</p>
-                                                    </div>
+{{--                                                    <div class="tp-product-banner-price mb-40">--}}
+{{--                                                        <span class="old-price">{{format_money_vnd($item['price'])}}</span>--}}
+{{--                                                        <p class="new-price">{{format_money_vnd($item['price_sell'])}}</p>--}}
+{{--                                                    </div>--}}
                                                     <div class="tp-product-banner-btn">
                                                         <a href="{{$info['zalo']}}" class="tp-btn tp-btn-2">Liên hệ </a>
                                                     </div>
