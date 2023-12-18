@@ -94,7 +94,7 @@
                                                         </h4>
                                                         <div class="tp-product-price-wrapper-2 mt-4">
                                                             <div class="tp-blog-btn">
-                                                                <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                                <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
                                                             </div>
 {{--                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
 {{--                                                            <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
@@ -138,7 +138,7 @@
                                                                 </h3>
                                                                 <div class="tp-product-price-wrapper-2">
                                                                     <div class="tp-blog-btn">
-                                                                        <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                                        <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
                                                                     </div>
 {{--                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
 {{--                                                                    <span class="tp-product-price-2 old-price">{{format_money_vnd($item_pr['price'])}}</span>--}}
@@ -218,7 +218,7 @@
                                     <a href="product-details.html">Cam kết chất lượng sản phẩm </a>
                                 </h4>
                                 <div class="tp-banner-btn">
-                                    <a href="{{$info['zalo']}}" class="tp-link-btn">Liên hệ
+                                    <a href="{{route('fe.contact')}}" class="tp-link-btn">Liên hệ
                                         <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.9998 6.19656L1 6.19656" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M8.75674 0.975394L14 6.19613L8.75674 11.4177" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -322,7 +322,7 @@
                                                     </h3>
                                                     <div class="tp-product-price-wrapper">
                                                         <div class="tp-blog-btn">
-                                                            <a class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                                            <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
                                                         </div>
 {{--                                                        <span class="tp-product-price old-price">{{format_money_vnd($item['price'])}}</span>--}}
 {{--                                                        <span class="tp-product-price new-price">{{format_money_vnd($item['price_sell'])}}</span>--}}
@@ -358,7 +358,7 @@
 {{--                                                        <p class="new-price">{{format_money_vnd($item['price_sell'])}}</p>--}}
 {{--                                                    </div>--}}
                                                     <div class="tp-product-banner-btn">
-                                                        <a href="{{$info['zalo']}}" class="tp-btn tp-btn-2">Liên hệ </a>
+                                                        <a href="{{route('fe.contact')}}" class="tp-btn tp-btn-2">Liên hệ </a>
                                                     </div>
                                                 </div>
                                             </div>
