@@ -19,6 +19,11 @@ class Category extends BaseModel
         return $this->hasOne(Category::class, 'id', 'parent_id');
     }
 
+    function child(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->HasMany(Category::class, 'parent_id', 'id');
+    }
+
     function product(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->HasMany(ProductModel::class, 'category_id', 'id');

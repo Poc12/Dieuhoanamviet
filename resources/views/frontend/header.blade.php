@@ -94,7 +94,6 @@
                 </div>
             </div>
         </div>
-
         <!-- header bottom start -->
         <div class="tp-header-bottom tp-header-bottom-border d-none d-lg-block">
             <div class="container">
@@ -126,12 +125,12 @@
                                              </span>
                                                 {{@$item['name']}}</a>
                                                     <ul class="mega-menu tp-submenu">
-                                                        @if(isset($item['product']))
+                                                        @if(isset($item->child))
                                                             <li>
                                                                 <ul>
-                                                                @foreach($item['product'] as $item_pro)
+                                                                @foreach($item->child as $item_pro)
                                                                         <li>
-                                                                            <a href="{{get_link_product($item_pro['slug'])}}">{{$item_pro['name']}}</a>
+                                                                            <a href="{{get_link_cate($item_pro['slug'])}}">{{$item_pro['name']}}</a>
                                                                         </li>
                                                                 @endforeach
                                                                 </ul>
