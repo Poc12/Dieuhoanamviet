@@ -36,10 +36,11 @@ class AppServiceProvider extends ServiceProvider
         $menu = Menu::query()->where('status', BaseModel::getStatusActive())
             ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])->get()->groupBy('type');
 
-        $cate = Category::query()->with(['product'])->active()
+        $cate = Category::query()->with('child')
+            ->active()
+            ->where('parent_id',0)
             ->where('type','=', Category::get_type_product())
             ->get();
-
         $sites = SitemapController::get_site_map(false);
         $sitemap = Sitemap::create();
         foreach ($sites as $site) {
