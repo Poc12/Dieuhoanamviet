@@ -41,7 +41,9 @@ class ProductController extends BaseController
     function after_input(&$tpl) {
         $tpl['status'] = BaseModel::getStatus();
         $tpl['categories'] = Category::query()->typeProduct()->get()->toArray();
-        $tpl['attributeProduct'] = ProductAttibute::query()->where('product_sku',$tpl['obj']['sku'])->get()->toArray();
+        if (isset($tpl['obj']['sku'])){
+            $tpl['attributeProduct'] = ProductAttibute::query()->where('product_sku',$tpl['obj']['sku'])->get()->toArray();
+        }
     }
 
     function _query_filter(&$query, Request $request)
