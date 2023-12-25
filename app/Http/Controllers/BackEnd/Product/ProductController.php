@@ -67,16 +67,16 @@ class ProductController extends BaseController
             'name' => 'required|string',
             'drive' => 'nullable|string',
             'stt' => 'nullable|numeric',
-            'price' => ['required', 'numeric',  function ($attribute, $value, $fail) use($request){
-                 if($value < 0) {
-                     return $fail('Giá gốc sản phẩm không hợp lệ');
-                 }
-            }],
-            'sell_price' => ['required', 'numeric',  function ($attribute, $value, $fail) use($request){
-                if($value < 0) {
-                    return $fail('Giá bán sản phẩm không hợp lệ');
-                }
-            }],
+//            'price' => ['required', 'numeric',  function ($attribute, $value, $fail) use($request){
+//                 if($value < 0) {
+//                     return $fail('Giá gốc sản phẩm không hợp lệ');
+//                 }
+//            }],
+//            'sell_price' => ['required', 'numeric',  function ($attribute, $value, $fail) use($request){
+//                if($value < 0) {
+//                    return $fail('Giá bán sản phẩm không hợp lệ');
+//                }
+//            }],
             'writen_by' => 'nullable|string',
             'year' => 'nullable|numeric',
             'description' => 'required|string',
