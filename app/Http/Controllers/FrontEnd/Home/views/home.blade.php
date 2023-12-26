@@ -54,8 +54,7 @@
                                                 <div class="tp-product-item-2 mb-40">
                                                     <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img">
                                                         <a
-{{--                                                                href="{{get_link_product($item_pr['slug'])}}"--}}
-                                                                href="javascript:void(0);"
+                                                         href="{{get_link_product($item_pr['slug'])}}"
                                                         ><img  alt="" src="{{images_src($item_pr['avatar'])}}">
                                                         </a>
                                                         <!-- product action -->
@@ -87,10 +86,7 @@
                                                             <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
                                                         <h4 class="tp-product-title-2">
-                                                            <a
-{{--                                                             href="{{get_link_product($item_pr['slug'])}}"--}}
-                                                            href="javascript:void(0);"
-                                                            >{{$item_pr['name']}}</a>
+                                                            <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
                                                         </h4>
                                                         <div class="tp-product-price-wrapper-2 mt-4">
                                                             <div class="tp-blog-btn">
@@ -131,9 +127,7 @@
                                                         <div class="tp-product-list-content">
                                                             <div class="tp-product-content-2 pt-15">
                                                                 <h3 class="tp-product-title-2">
-                                                                    <a
-{{--                                                                    href="{{get_link_product($item_pr['slug'])}}"--}}
-                                                                    href="javascript:void(0);"
+                                                                    <a href="{{get_link_product($item_pr['slug'])}}"
                                                                     >{{$item_pr['name']}}</a>
                                                                 </h3>
                                                                 <div class="tp-product-price-wrapper-2">
@@ -215,7 +209,7 @@
                             <div class="tp-banner-content">
                                 <span>Giao hàng nhanh chóng</span>
                                 <h4 class="tp-banner-title">
-                                    <a href="product-details.html">Cam kết chất lượng sản phẩm </a>
+                                    <a href="{{route('fe.contact')}}">Cam kết chất lượng sản phẩm </a>
                                 </h4>
                                 <div class="tp-banner-btn">
                                     <a href="{{route('fe.contact')}}" class="tp-link-btn">Liên hệ
@@ -274,10 +268,7 @@
                                        @foreach($trending_product as $item)
                                             <div class="tp-product-item transition-3 mb-25 swiper-slide">
                                                 <div class="tp-product-thumb p-relative fix m-img">
-                                                    <a
-{{--                                                            href="{{get_link_product($item['slug'])}}"--}}
-                                                            href="javascript:void(0);"
-                                                    >
+                                                    <a href="{{get_link_product($item['slug'])}}">
                                                         <img src="{{images_src($item['avatar'])}}" alt="">
                                                     </a>
                                                     <!-- product action -->
@@ -314,10 +305,7 @@
                                                         <a href="{{get_link_cate($item->category['slug'])}}">{{@$item->category['name']}}</a>
                                                     </div>
                                                     <h3 class="tp-product-title">
-                                                        <a
-{{--                                                                href="{{get_link_product($item['slug'])}}"--}}
-                                                                href="javascript:void(0);"
-                                                        >{{$item['name']}}
+                                                        <a href="{{get_link_product($item['slug'])}}">{{$item['name']}}
                                                         </a>
                                                     </h3>
                                                     <div class="tp-product-price-wrapper">

@@ -69,8 +69,11 @@
 
                                 <!-- price -->
                                 <div class="tp-product-details-price-wrapper mb-20">
-                                    <span class="tp-product-details-price old-price">{{format_money_vnd($product['price'])}}</span>
-                                    <span class="tp-product-details-price new-price">{{format_money_vnd($product['sell_price'])}}</span>
+                                    <div class="tp-blog-btn">
+                                        <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
+                                    </div>
+{{--                                    <span class="tp-product-details-price old-price">{{format_money_vnd($product['price'])}}</span>--}}
+{{--                                    <span class="tp-product-details-price new-price">{{format_money_vnd($product['sell_price'])}}</span>--}}
                                 </div>
 
                                 <!-- actions -->\
@@ -180,50 +183,30 @@
                                                         <!-- reviews -->
                                                         <div class="tp-product-details-review-list pr-110">
                                                             <h3 class="tp-product-details-review-title">Đánh giá của khách hàng </h3>
-                                                            <div class="tp-product-details-review-avater d-flex align-items-start">
-                                                                <div class="tp-product-details-review-avater-thumb">
-                                                                    <a href="#">
-                                                                        <img src="assets/img/users/user-3.jpg" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <div class="tp-product-details-review-avater-content">
-                                                                    <div class="tp-product-details-review-avater-rating d-flex align-items-center">
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
+                                                            @if(isset($comments))
+                                                                @foreach( $comments as $k => $comment)
+                                                                    <div class="tp-product-details-review-avater d-flex align-items-start" id="comment-{{$k}}">
+                                                                        <div class="tp-product-details-review-avater-thumb">
+                                                                            <a href="#">
+                                                                                <img src="{{url('assets/images/user.jpeg')}}" alt="user-{{$k}}">
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="tp-product-details-review-avater-content">
+                                                                            <div class="tp-product-details-review-avater-rating d-flex align-items-center">
+                                                                                <span><i class="fa-solid fa-star"></i></span>
+                                                                                <span><i class="fa-solid fa-star"></i></span>
+                                                                                <span><i class="fa-solid fa-star"></i></span>
+                                                                                <span><i class="fa-solid fa-star"></i></span>
+                                                                                <span><i class="fa-solid fa-star"></i></span>
+                                                                            </div>
+                                                                            <h3 class="tp-product-details-review-avater-title">{{$comment['name']}}</h3>
+                                                                            <div class="tp-product-details-review-avater-comment">
+                                                                                <p>{{$comment['comment']}}</p>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                    <h3 class="tp-product-details-review-avater-title">Eleanor Fant</h3>
-                                                                    <span class="tp-product-details-review-avater-meta">06 March, 2023 </span>
-
-                                                                    <div class="tp-product-details-review-avater-comment">
-                                                                        <p>Designed very similarly to the nearly double priced Galaxy tab S6, with the only removal being.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="tp-product-details-review-avater d-flex align-items-start">
-                                                                <div class="tp-product-details-review-avater-thumb">
-                                                                    <a href="#">
-                                                                        <img src="assets/img/users/user-2.jpg" alt="">
-                                                                    </a>
-                                                                </div>
-                                                                <div class="tp-product-details-review-avater-content">
-                                                                    <div class="tp-product-details-review-avater-rating d-flex align-items-center">
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                        <span><i class="fa-solid fa-star"></i></span>
-                                                                    </div>
-                                                                    <h3 class="tp-product-details-review-avater-title">Shahnewaz Sakil</h3>
-                                                                    <span class="tp-product-details-review-avater-meta">06 March, 2023 </span>
-
-                                                                    <div class="tp-product-details-review-avater-comment">
-                                                                        <p>This review is for the Samsung Tab S6 Lite, 64gb wifi in blue. purchased this product performed.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                @endforeach
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div> <!-- end col -->
@@ -231,14 +214,14 @@
                                                     <div class="tp-product-details-review-form">
                                                         <h3 class="tp-product-details-review-form-title">Đánh giá về sản phẩm </h3>
                                                         <p>Đánh giá của bạn giúp sẽ giúp chúng tôi cải thiện về chất lượng sản phẩm và dịch vụ </p>
-                                                        <form action="#">
+                                                        <form id="comments_form_product">
                                                             <div class="tp-product-details-review-input-wrapper">
                                                                 <div class="tp-product-details-review-input-box">
                                                                     <div class="tp-product-details-review-input">
-                                                                        <textarea id="msg" name="msg" placeholder="Write your review here..."></textarea>
+                                                                        <textarea id="comments" name="comments" placeholder="Viết đánh giá ..."></textarea>
                                                                     </div>
                                                                     <div class="tp-product-details-review-input-title">
-                                                                        <label for="msg">Đánh giá</label>
+                                                                        <label for="comments">Đánh giá</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="tp-product-details-review-input-box">
@@ -259,7 +242,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="tp-product-details-review-btn-wrapper">
-                                                                <button class="tp-product-details-review-btn">Gửi</button>
+                                                                <button id="submit_comment_product" type="button" class="tp-product-details-review-btn">Gửi</button>
                                                             </div>
                                                         </form>
                                                     </div>
