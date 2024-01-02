@@ -60,11 +60,6 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                        <div class="logo">
-                            <a href="/">
-                                <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
-                            </a>
-                        </div>
                     </div>
                     <div class="col-xl-6 col-lg-7 d-none d-lg-block">
                         <div class="tp-header-search pl-70">
@@ -99,52 +94,14 @@
             <div class="container">
                 <div class="tp-mega-menu-wrapper p-relative">
                     <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-3">
-                            <div class="tp-header-category tp-category-menu tp-header-category-toggle">
-                                <button class="tp-category-menu-btn tp-category-menu-toggle">
-                                 <span>
-                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447715 16 1C16 1.55228 15.5523 2 15 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H17C17.5523 6 18 6.44772 18 7C18 7.55228 17.5523 8 17 8H1C0.447715 8 0 7.55228 0 7ZM1 12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H11C11.5523 14 12 13.5523 12 13C12 12.4477 11.5523 12 11 12H1Z" fill="currentColor"/>
-                                    </svg>
-                                 </span>
-                                    SẢN PHẨM
-                                </button>
-                                <nav class="tp-category-menu-content">
-                                    <ul>
-                                        @if(isset($categories))
-                                            @foreach($categories as $item)
-                                            <li class="has-dropdown">
-                                            <a href="{{get_link_cate(@$item['slug'])}}" class="has-mega-menu">
-                                             <span>
-                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M2.6856 4.54975C2.6856 3.52014 3.51984 2.6859 4.54945 2.68508H5.3977C5.88984 2.68508 6.36136 2.48971 6.71089 2.14348L7.30359 1.54995C8.02984 0.819578 9.21031 0.816281 9.94068 1.54253L9.9415 1.54336L9.94892 1.54995L10.5425 2.14348C10.892 2.49053 11.3635 2.68508 11.8556 2.68508H12.7031C13.7327 2.68508 14.5677 3.51932 14.5677 4.54975V5.39636C14.5677 5.88849 14.7623 6.36084 15.1093 6.71037L15.7029 7.3039C16.4332 8.03015 16.4374 9.21061 15.7111 9.94098L15.7103 9.94181L15.7029 9.94923L15.1093 10.5428C14.7623 10.8915 14.5677 11.363 14.5677 11.8551V12.7034C14.5677 13.733 13.7335 14.5672 12.7039 14.5672H12.7031H11.854C11.3619 14.5672 10.8895 14.7626 10.5408 15.1096L9.94727 15.7024C9.22185 16.4327 8.04221 16.4368 7.31183 15.7122C7.31101 15.7114 7.31019 15.7106 7.30936 15.7098L7.30194 15.7024L6.70924 15.1096C6.36054 14.7626 5.88819 14.568 5.39605 14.5672H4.54945C3.51984 14.5672 2.6856 13.733 2.6856 12.7034V11.8535C2.6856 11.3613 2.49023 10.8898 2.14318 10.5411L1.55047 9.94758C0.820097 9.22215 0.815976 8.04251 1.5414 7.31214C1.5414 7.31132 1.54223 7.31049 1.54305 7.30967L1.55047 7.30225L2.14318 6.70872C2.49023 6.35919 2.6856 5.88767 2.6856 5.39471V4.54975" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                   <path d="M6.50787 10.7453L10.745 6.50812" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                   <path d="M10.6823 10.6862H10.6897" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                   <path d="M6.56053 6.56446H6.56795" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                             </span>
-                                                {{@$item['name']}}</a>
-                                                    <ul class="mega-menu tp-submenu">
-                                                        @if(isset($item->child))
-                                                            <li>
-                                                                <ul>
-                                                                @foreach($item->child as $item_pro)
-                                                                        <li>
-                                                                            <a href="{{get_link_cate($item_pro['slug'])}}">{{$item_pro['name']}}</a>
-                                                                        </li>
-                                                                @endforeach
-                                                                </ul>
-                                                            </li>
-                                                        @endif
-                                                    </ul>
-                                            </li>
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </nav>
+                        <div class="col-xl-1 col-lg-1">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
+                                </a>
                             </div>
                         </div>
-                        <div class="col-xl-9 col-lg-9">
+                        <div class="col-xl-11 col-lg-11">
                             <div class="main-menu menu-style-1">
                                 <nav class="tp-main-menu-content">
                                     <ul>
@@ -155,6 +112,30 @@
                                             $get_menu = $header_menu->where('parent_id', '<>', 0)->groupBy('parent_id')->toArray()
                                             @endphp
                                             @foreach($menu[1] as $item)
+                                                @if($loop->index == 3)
+                                                    <li class="has-dropdown has-mega-menu ">
+                                                        <a href="javascript:void(0)">SẢN PHẨM</a>
+                                                        <ul class="tp-submenu tp-mega-menu mega-menu-style-2">
+                                                            <!-- first col -->
+                                                            @if(isset($categories))
+                                                                @foreach($categories as $item)
+                                                                    <li class="has-dropdown">
+                                                                        <a href="{{get_link_cate(@$item['slug'])}}" class="mega-menu-title">{{@$item['name']}}</a>
+                                                                        <ul class="tp-submenu">
+                                                                            @if(isset($item->child))
+                                                                                @foreach($item->child as $item_pro)
+                                                                                    <li>
+                                                                                        <a href="{{get_link_cate($item_pro['slug'])}}">{{$item_pro['name']}}</a>
+                                                                                    </li>
+                                                                                @endforeach
+                                                                            @endif
+                                                                        </ul>
+                                                                    </li>
+                                                                @endforeach
+                                                            @endif
+                                                        </ul>
+                                                    </li>
+                                                @endif
                                                 @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
                                                     @if(!$item['apply'])
                                                         <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
@@ -165,7 +146,7 @@
                                                     @endif
                                                 @else
                                                     @if(!$item['parent_id'])
-                                                        <li  class="has-dropdown">
+                                                        <li class="has-dropdown">
                                                             <a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{$item['name']}}</a>
                                                             <div class="shop-mega-menu tp-submenu tp-mega-menu">
                                                                 <div class="shop-mega-menu-list">
