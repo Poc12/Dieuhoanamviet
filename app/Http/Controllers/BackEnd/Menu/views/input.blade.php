@@ -148,7 +148,7 @@
         function appen_menu() {
             $('.parent-ap').remove()
             let type = $('#type').val()
-            let url = '{{route($router_current_name, ['cmd' => 'ajax_get_menu'])}}'
+            let url = '{{route($router_current_name, ['cmd' => 'ajax_get_menu','id' => request('id')])}}'
             url = setUrlParametersHref(url, 'type', type)
             return _GET_URL(url, {
                 callback: function (res) {

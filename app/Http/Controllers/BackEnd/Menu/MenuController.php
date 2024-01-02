@@ -48,8 +48,14 @@ class MenuController extends BaseController
     }
 
     function ajax_get_menu(Request $request) {
+        $id = $request->get('id');
         $type = $request->get('type');
-        $menu = $this->model->where('status', BaseModel::getStatusActive())->where('parent_id', 0)->where('type', $type)->get(['id', 'name', 'parent_id']);
+        $menu_query = $this->model->where('status', BaseModel::getStatusActive())->where('parent_id', 0)
+            ->where('type', $type);
+            if ($id){
+                $menu_query->where('id','<>',$id);
+            }
+        $menu = $menu_query->get(['id', 'name', 'parent_id']);
         eJson::getInstance()->getJsonSuccess('Lấy danh sách menu thành công', $menu);
     }
 
