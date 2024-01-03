@@ -133,7 +133,7 @@
                                                 @endif
                                             @endforeach
                                         @endif
-                                        <li><a href="{{route('fe.contact')}}">LIÊN HỆ BÁO GIÁ</a></li>
+                                        <li><a href="{{route('fe.contact')}}">LIÊN HỆ</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -225,7 +225,7 @@
                                         @endif
                                     @endforeach
                                 @endif
-                                <li><a href="{{route('fe.contact')}}">LIÊN HỆ BÁO GIÁ</a></li>
+                                <li><a href="{{route('fe.contact')}}">LIÊN HỆ</a></li>
                             </ul>
                         </nav>
                     </div>
