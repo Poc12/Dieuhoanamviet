@@ -10401,21 +10401,21 @@ div.tp-blog-thumb img {
   margin-bottom: 8px;
 }
 .tp-slider-height-3 {
-  min-height: 950px;
+  min-height: 600px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-slider-height-3 {
-    min-height: 850px;
+    min-height: 550px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-slider-height-3 {
-    min-height: 750px;
+    min-height: 400px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .tp-slider-height-3 {
-    min-height: 650px;
+    min-height: 400px;
   }
 }
 .tp-slider-thumb-3 {
