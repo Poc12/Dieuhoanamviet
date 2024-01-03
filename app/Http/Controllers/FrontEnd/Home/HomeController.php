@@ -17,7 +17,7 @@ class HomeController extends FrontEndController
     public function __construct()
     {
         $this->dir = __DIR__;
-        $this->per_page = 12;
+        $this->per_page = 8;
         $this->seo()->setTitle('Trang chủ');
         SEOMeta::setKeywords('Trang chủ');
         $this->seo()->setDescription('Trang chủ của website này là nơi đầu tiên mà khách hàng sẽ đến khi truy cập vào trang web của chúng tôi. Tại đây, bạn sẽ tìm thấy một tầm nhìn tổng quan về sản phẩm hoặc dịch vụ của chúng tôi cùng với những thông tin mới nhất và những sản phẩm được quảng cáo đặc biệt.');

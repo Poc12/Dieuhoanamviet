@@ -56,52 +56,20 @@
         </div>
 
         <!-- header main start -->
-        <div class="tp-header-main tp-header-sticky">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
-                    </div>
-                    <div class="col-xl-6 col-lg-7 d-none d-lg-block">
-                        <div class="tp-header-search pl-70">
-                            <form id="searchForm">
-                                <div class="tp-header-search-wrapper d-flex align-items-center">
-                                    <div class="tp-header-search-box" style="border-radius: 20%">
-                                        <input name="search" type="text" placeholder="Nhập tên sản phầm cần tìm ">
-                                    </div>
-                                    <div class="tp-header-search-btn">
-                                        <button type="submit">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-3 col-md-8 col-6">
-                        <div class="tp-header-main-right d-flex align-items-center justify-content-end">
-                            <div class="tp-header-login d-none d-lg-block">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- header bottom start -->
         <div class="tp-header-bottom tp-header-bottom-border d-none d-lg-block">
             <div class="container">
                 <div class="tp-mega-menu-wrapper p-relative">
                     <div class="row align-items-center">
-                        <div class="col-xl-1 col-lg-1">
+                        <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="/">
                                     <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-11 col-lg-11">
+                        <div class="col-xl-9 col-lg-9">
                             <div class="main-menu menu-style-1">
                                 <nav class="tp-main-menu-content">
                                     <ul>
@@ -124,7 +92,7 @@
                                                                         <ul class="tp-submenu">
                                                                             @if(isset($item->child))
                                                                                 @foreach($item->child as $item_pro)
-                                                                                    <li>
+                                                                                    <li class="boder_gray" style="width: 170px">
                                                                                         <a href="{{get_link_cate($item_pro['slug'])}}">{{$item_pro['name']}}</a>
                                                                                     </li>
                                                                                 @endforeach
@@ -135,31 +103,32 @@
                                                             @endif
                                                         </ul>
                                                     </li>
-                                                @endif
-                                                @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
-                                                    @if(!$item['apply'])
-                                                        <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
-                                                    @elseif($item['apply'] === 3)
-                                                        <li><a href="{{get_link_html(@$item['post_static']['slug'])}}">{{$item['name']}}</a></li>
-                                                    @else
-                                                        <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
-                                                    @endif
                                                 @else
-                                                    @if(!$item['parent_id'])
-                                                        <li class="has-dropdown">
-                                                            <a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{$item['name']}}</a>
-                                                            <div class="shop-mega-menu tp-submenu tp-mega-menu">
-                                                                <div class="shop-mega-menu-list">
-                                                                    <ul class="tp-submenu">
-                                                                        @if(isset($get_menu[$item['id']]))
-                                                                            @foreach($get_menu[$item['id']] as $val)
-                                                                                <li><a href="{{@$val['apply'] === 3 ? get_link_html(@$val['post_static']['slug']) : get_link_cate(@$val['apply_rele']['slug'])}}">{{@$val['name']}}</a></li>
-                                                                            @endforeach
-                                                                        @endif
-                                                                    </ul>
+                                                    @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
+                                                        @if(!$item['apply'])
+                                                            <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
+                                                        @elseif($item['apply'] === 3)
+                                                            <li><a href="{{get_link_html(@$item['post_static']['slug'])}}">{{$item['name']}}</a></li>
+                                                        @else
+                                                            <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
+                                                        @endif
+                                                    @else
+                                                        @if(!$item['parent_id'])
+                                                            <li class="has-dropdown">
+                                                                <a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{$item['name']}}</a>
+                                                                <div class="shop-mega-menu tp-submenu tp-mega-menu">
+                                                                    <div class="shop-mega-menu-list">
+                                                                        <ul class="tp-submenu">
+                                                                            @if(isset($get_menu[$item['id']]))
+                                                                                @foreach($get_menu[$item['id']] as $val)
+                                                                                    <li class="boder_gray"><a href="{{@$val['apply'] === 3 ? get_link_html(@$val['post_static']['slug']) : get_link_cate(@$val['apply_rele']['slug'])}}">{{@$val['name']}}</a></li>
+                                                                                @endforeach
+                                                                            @endif
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                        </li>
+                                                            </li>
+                                                        @endif
                                                     @endif
                                                 @endif
                                             @endforeach
@@ -198,39 +167,65 @@
                                         $get_menu = $header_menu->where('parent_id', '<>', 0)->groupBy('parent_id')->toArray()
                                     @endphp
                                     @foreach($menu[1] as $item)
-                                        @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
-                                            @if(!$item['apply'])
-                                                <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
-                                            @elseif($item['apply'] === 3)
-                                                <li><a href="{{get_link_html(@$item['post_static']['slug'])}}">{{$item['name']}}</a></li>
-                                            @else
-                                                <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
-                                            @endif
+                                        @if($loop->index == 3)
+                                            <li class="has-dropdown has-mega-menu ">
+                                                <a href="javascript:void(0)">SẢN PHẨM</a>
+                                                <ul class="tp-submenu tp-mega-menu mega-menu-style-2">
+                                                    <!-- first col -->
+                                                    @if(isset($categories))
+                                                        @foreach($categories as $item)
+                                                            <li class="has-dropdown">
+                                                                <a href="{{get_link_cate(@$item['slug'])}}" class="mega-menu-title">{{@$item['name']}}</a>
+                                                                <ul class="tp-submenu">
+                                                                    @if(isset($item->child))
+                                                                        @foreach($item->child as $item_pro)
+                                                                            <li class="boder_gray" style="width: 170px">
+                                                                                <a href="{{get_link_cate($item_pro['slug'])}}">{{$item_pro['name']}}</a>
+                                                                            </li>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </ul>
+                                                            </li>
+                                                        @endforeach
+                                                    @endif
+                                                </ul>
+                                            </li>
                                         @else
-                                            @if(!$item['parent_id'])
-                                                <li  class="has-dropdown has-mega-menu">
-                                                    <a href="shop.html">{{$item['name']}}</a>
-                                                    <div class="shop-mega-menu tp-submenu tp-mega-menu">
-                                                        <div class="row">
-                                                            <div class="col-lg-2">
-                                                                <div class="shop-mega-menu-list">
-                                                                    <a href="{{@$item['apply'] === 3 ? get_link_html(@$item['post_static']['slug']) : get_link_cate(@$item['apply_rele']['slug'])}}" class="shop-mega-menu-title">{{@$item['name']}}</a>
-                                                                    <ul>
-                                                                        @if(isset($get_menu[$item['id']]))
-                                                                            @foreach($get_menu[$item['id']] as $val)
-                                                                                <li><a href="{{@$val['apply'] === 3 ? get_link_html(@$val['post_static']['slug']) : get_link_cate(@$val['apply_rele']['slug'])}}">{{@$val['name']}}</a></li>
-                                                                            @endforeach
-                                                                        @endif
-                                                                    </ul>
+                                            @if(!$item['parent_id'] && !in_array($item['id'], $plug_menu))
+                                                @if(!$item['apply'])
+                                                    <li><a href="{{route('fe.home')}}">{{$item['name']}}</a></li>
+                                                @elseif($item['apply'] === 3)
+                                                    <li><a href="{{get_link_html(@$item['post_static']['slug'])}}">{{$item['name']}}</a></li>
+                                                @else
+                                                    <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
+                                                @endif
+                                            @else
+                                                @if(!$item['parent_id'])
+                                                    <li  class="has-dropdown has-mega-menu">
+                                                        <a href="shop.html">{{$item['name']}}</a>
+                                                        <div class="shop-mega-menu tp-submenu tp-mega-menu">
+                                                            <div class="row">
+                                                                <div class="col-lg-2">
+                                                                    <div class="shop-mega-menu-list">
+                                                                        <a href="{{@$item['apply'] === 3 ? get_link_html(@$item['post_static']['slug']) : get_link_cate(@$item['apply_rele']['slug'])}}" class="shop-mega-menu-title">{{@$item['name']}}</a>
+                                                                        <ul>
+                                                                            @if(isset($get_menu[$item['id']]))
+                                                                                @foreach($get_menu[$item['id']] as $val)
+                                                                                    <li class="boder_gray"><a href="{{@$val['apply'] === 3 ? get_link_html(@$val['post_static']['slug']) : get_link_cate(@$val['apply_rele']['slug'])}}">{{@$val['name']}}</a></li>
+                                                                                @endforeach
+                                                                            @endif
+                                                                        </ul>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </li>
+                                                    </li>
+                                                @endif
                                             @endif
                                         @endif
                                     @endforeach
                                 @endif
+                                <li><a href="{{route('fe.contact')}}">LIÊN HỆ BÁO GIÁ</a></li>
                             </ul>
                         </nav>
                     </div>
