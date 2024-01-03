@@ -286,7 +286,7 @@ li,
 	typography css start 
 ---------------------------------*/
 body {
-  font-family: var(--tp-ff-body);
+  font-family: 'Muli-B';
   font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
@@ -6164,7 +6164,7 @@ body .ui-tooltip {
 }
 .tp-header-search-wrapper {
   position: relative;
-  border: 2px solid var(--tp-theme-primary);
+  border: 2px solid var(--tp-pink-1);
   margin-left: 10px;
 }
 .tp-header-search-box {
@@ -6233,7 +6233,7 @@ body .ui-tooltip {
   width: 60px;
   height: 46px;
   line-height: 46px;
-  background-color: var(--tp-theme-primary);
+  background-color: var(--tp-pink-1);
   color: var(--tp-common-white);
 }
 .tp-header-login-icon span {
@@ -6647,6 +6647,10 @@ body .ui-tooltip {
   display: inline-block;
   height: 1px;
   background-color: var(--tp-common-white);
+}
+
+.boder_gray {
+  border-bottom: 1px solid #a7aeb7;
 }
 
 /*----------------------------------------*/
@@ -7144,7 +7148,7 @@ body .ui-tooltip {
   transform: translateY(0%) rotate(-90deg);
 }
 .main-menu > nav > ul > li > .tp-submenu li a {
-  padding: 3px 0;
+  padding: 10px 0;
   font-size: 14px;
   position: relative;
   z-index: 1;
@@ -7452,8 +7456,8 @@ body .ui-tooltip {
 }
 
 .shop-mega-menu {
-  padding: 30px 40px 0 !important;
-  padding-bottom: 30px !important;
+  padding: 20px 20px 0 !important;
+  padding-bottom: 20px !important;
 }
 .shop-mega-menu-title {
   font-size: 16px;

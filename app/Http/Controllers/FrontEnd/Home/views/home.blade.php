@@ -6,7 +6,39 @@
         <!--Swiper Banner Start -->
         @include('frontend.banner',['banners' => $banners,'trending_product' => $trending_product])
         <!--Swiper Banner End-->
-
+        <div class="tp-header-main tp-header-sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-6">
+                    </div>
+                    <div class="col-xl-6 col-lg-7 d-none d-lg-block">
+                        <div class="tp-header-search pl-70">
+                            <form id="searchForm">
+                                <div class="tp-header-search-wrapper d-flex align-items-center">
+                                    <div class="tp-header-search-box" style="border-radius: 20%">
+                                        <input name="search" type="text" placeholder="Nhập tên sản phầm cần tìm ">
+                                    </div>
+                                    <div class="tp-header-search-btn">
+                                        <button type="submit">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-3 col-md-8 col-6">
+                        <div class="tp-header-main-right d-flex align-items-center justify-content-end">
+                            <div class="tp-header-login d-none d-lg-block">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- shop area start -->
         <section class="tp-shop-area pt-20 pb-20">
             <div class="container">
