@@ -37,6 +37,7 @@ class AppServiceProvider extends ServiceProvider
             ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])->get()->groupBy('type');
 
         $cate = Category::query()->with('child')
+            ->whereHas('child')
             ->active()
             ->where('parent_id',0)
             ->where('type','=', Category::get_type_product())
