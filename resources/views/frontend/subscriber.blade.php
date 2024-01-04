@@ -1,4 +1,4 @@
-<section class="tp-subscribe-area pt-70 pb-65 theme-bg p-relative z-index-1">
+<section class="tp-subscribe-area pt-70 pb-65 bg-color p-relative z-index-1">
     <div class="tp-subscribe-shape">
         <img class="tp-subscribe-shape-1" src="{{url('shofy/assets/img/subscribe/subscribe-shape-1.png')}}" alt="">
         <img class="tp-subscribe-shape-2" src="{{url('shofy/assets/img/subscribe/subscribe-shape-2.png')}}" alt="">

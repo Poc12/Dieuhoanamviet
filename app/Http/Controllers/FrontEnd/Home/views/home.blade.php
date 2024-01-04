@@ -367,7 +367,7 @@
                         <div class="swiper-wrapper">
                             @if(isset($new_product))
                                 @foreach($new_product as $item)
-                                    <div class="tp-product-banner-inner theme-bg p-relative z-index-1 fix swiper-slide">
+                                    <div class="tp-product-banner-inner bg-color p-relative z-index-1 fix swiper-slide">
                                         <h4 class="tp-product-banner-bg-text">tablet</h4>
                                         <div class="row align-items-center">
                                             <div class="col-xl-6 col-lg-6">

@@ -1,7 +1,7 @@
 <header>
     <div class="tp-header-area p-relative z-index-11">
         <!-- header top start  -->
-        <div class="tp-header-top bg-primary p-relative z-index-1 d-none d-md-block">
+        <div class="tp-header-top bg-color p-relative z-index-1 d-none d-md-block">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-10">
