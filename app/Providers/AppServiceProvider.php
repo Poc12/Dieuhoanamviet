@@ -52,7 +52,7 @@ class AppServiceProvider extends ServiceProvider
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
         view()->share('info', $info);
-        view()->share('categories', $cate);
+        view()->share('categories_menu', $cate);
         view()->share('menu', $menu);
 
     }

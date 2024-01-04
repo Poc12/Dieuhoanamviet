@@ -112,8 +112,8 @@
                                                 <a href="javascript:void(0)">SẢN PHẨM</a>
                                                 <ul class="tp-submenu tp-mega-menu mega-menu-style-2">
                                                     <!-- first col -->
-                                                    @if(isset($categories))
-                                                        @foreach($categories as $item)
+                                                    @if(isset($categories_menu))
+                                                        @foreach($categories_menu as $item)
                                                             <li class="has-dropdown">
                                                                 <a href="{{get_link_cate(@$item['slug'])}}" class="mega-menu-title">{{@$item['name']}}</a>
                                                                 <ul class="tp-submenu">
@@ -201,8 +201,8 @@
                                         <a href="javascript:void(0)">SẢN PHẨM</a>
                                         <ul class="tp-submenu tp-mega-menu mega-menu-style-2">
                                             <!-- first col -->
-                                            @if(isset($categories))
-                                                @foreach($categories as $item)
+                                            @if(isset($categories_menu))
+                                                @foreach($categories_menu as $item)
                                                     <li class="has-dropdown">
                                                         <a href="{{get_link_cate(@$item['slug'])}}" class="mega-menu-title">{{@$item['name']}}</a>
                                                         <ul class="tp-submenu">
