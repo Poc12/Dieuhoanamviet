@@ -84,10 +84,9 @@
                                             @foreach($product as  $item_pr)
                                                 <div class="col-xl-3 col-md-4 col-sm-4 p-1">
                                                 <div class="tp-product-item-2 mb-40">
-                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img">
-                                                        <a
-                                                         href="{{get_link_product($item_pr['slug'])}}"
-                                                        ><img  alt="" src="{{images_src($item_pr['avatar'])}}">
+                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img"
+                                                         style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
+                                                        <a href="{{get_link_product($item_pr['slug'])}}">
                                                         </a>
                                                         <!-- product action -->
                                                         <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -139,9 +138,8 @@
                                                 <div class="col-xl-12">
                                                     @foreach($product as  $item_pr)
                                                     <div class="tp-product-list-item d-md-flex">
-                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix">
+                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                             <a href="{{get_link_html($item_pr['slug'])}}">
-                                                                <img src="{{images_src($item_pr['avatar'])}}" alt="" style="max-height: 200px;">
                                                             </a>
                                                             <!-- product action -->
                                                             <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -299,9 +297,8 @@
                                     @if(isset($trending_product))
                                        @foreach($trending_product as $item)
                                             <div class="tp-product-item transition-3 mb-25 swiper-slide">
-                                                <div class="tp-product-thumb p-relative fix m-img">
+                                                <div class="tp-product-thumb p-relative fix m-img" style="background: url('{{images_src($item['avatar'])}}');height: 12rem;background-size: cover">
                                                     <a href="{{get_link_product($item['slug'])}}">
-                                                        <img src="{{images_src($item['avatar'])}}" alt="">
                                                     </a>
                                                     <!-- product action -->
                                                     <div class="tp-product-action">
