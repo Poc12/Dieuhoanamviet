@@ -111,8 +111,9 @@
                                 </div>
                                 <div class="tp-product-details-msg mb-15">
                                     <ul>
-                                        <li>5 ngày đổi trả dễ dàng</li>
-                                        <li>Nhận hàng trong ngày</li>
+                                        <li>Tình trạng: Mới 100%</li>
+                                        <li>Hỗ trợ kỹ thuật, tư vấn (trực tiếp hoặc từ xa) miễn phí</li>
+                                        <li>Cung cấp dịch vụ bảo trì, bảo dưỡng, đảm bảo vật tư phụ thay thế (nếu khách hàng có yêu cầu)</li>
                                     </ul>
                                 </div>
                             </div>
