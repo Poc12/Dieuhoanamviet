@@ -432,7 +432,7 @@
                                             <div class="tp-blog-item mb-30 swiper-slide">
                                                 <div class="tp-blog-thumb p-relative fix">
                                                     <a href="{{get_link_html($item_p['slug'])}}">
-                                                        <img src="{{images_src($item_pr['avatar'])}}" alt="">
+                                                        <img src="{{images_src($item_p['avatar'])}}" alt="">
                                                     </a>
                                                     <div class="tp-blog-meta tp-blog-meta-date">
                                                         <span>{{show_int_date($item_p['created_at'],'d/m/Y')}}</span>
