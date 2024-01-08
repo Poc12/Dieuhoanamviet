@@ -47,9 +47,8 @@
                                         @foreach($product as  $item_pr)
                                             <div class="col-xl-3 col-md-4 col-sm-4 p-1">
                                                 <div class="tp-product-item-2 mb-40">
-                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img">
+                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                         <a href="{{get_link_product($item_pr['slug'])}}">
-                                                            <img  alt="" src="{{images_src($item_pr['avatar'])}}">
                                                         </a>
                                                         <!-- product action -->
                                                         <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -80,10 +79,7 @@
                                                             <a class="font-12 text-primary" href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
                                                         <h3 class="tp-product-title-2">
-                                                            <a
-                                                               {{--href="{{get_link_product($item_pr['slug'])}}"--}}
-                                                               href="javascript:void(0);"
-                                                            >{{$item_pr['name']}}</a>
+                                                            <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
                                                         </h3>
 {{--                                                        <div class="tp-product-price-wrapper-2">--}}
 {{--                                                            <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
@@ -101,9 +97,8 @@
                                             <div class="col-xl-12">
                                                 @foreach($product as  $item_pr)
                                                     <div class="tp-product-list-item d-md-flex">
-                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix">
-                                                            <a href="#">
-                                                                <img src="{{images_src($item_pr['avatar'])}}" alt="">
+                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix" >
+                                                            <a href="{{get_link_product($item_pr['slug'])}}" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover" >
                                                             </a>
                                                             <!-- product action -->
                                                             <div class="tp-product-action-2 tp-product-action-blackStyle">
@@ -121,10 +116,7 @@
                                                         <div class="tp-product-list-content">
                                                             <div class="tp-product-content-2 pt-15">
                                                                 <h3 class="tp-product-title-2">
-                                                                    <a
-                                                                    {{-- href="{{get_link_product($item_pr['slug'])}}"--}}
-                                                                    href="javascript:void(0);"
-                                                                    >{{$item_pr['name']}}</a>
+                                                                    <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
                                                                 </h3>
 {{--                                                                <div class="tp-product-price-wrapper-2">--}}
 {{--                                                                    <span class="tp-product-price-2 new-price">{{format_money_vnd($item_pr['sell_price'])}}</span>--}}
