@@ -60,7 +60,7 @@
                                     <div class="col-xl-4 col-lg-6">
                                         <div class="tp-postbox-details-share text-md-end">
                                             <span>Chia sẻ :</span>
-                                            <a class="fab fa-facebook-f" target="_blank" href="http://www.facebook.com/share.php?u={{get_link_html(@$post['slug'])}}"></a>
+                                            <a class="fab fa-facebook-f" target="_blank" href="http://www.facebook.com/share.php?u={{env('DOMAIN').'/'.get_link_html(@$post['slug'])}}"></a>
                                             <a class="fa-brands fa-youtube" target="_blank" href="{{@$info['youtobe']}}"></a>
                                             <a class="fa-solid fa-envelope" target="_blank" href="mailto:{{@$info['email']}}"></a>
                                             <a class="fa-solid fa-phone-volume" target="_blank" href="tel:{{@$info['phone']}}"></a>
