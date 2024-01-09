@@ -31,7 +31,7 @@
                                         @if($item['child'])
                                             @foreach($item['child'] as $item_child)
                                                 @if($item_child['apply'] === 3)
-                                                    <li><a href="{{@$item_child['post_static']['slug']}}">{{@$item_child['name']}}</a></li>
+                                                    <li><a href="{{@get_link_html($item_child['post_static']['slug'])}}">{{@$item_child['name']}}</a></li>
                                                 @else
                                                     <li><a href="{{get_link_cate(@$item_child['apply_rele']['slug'])}}">{{@$item_child['name']}}</a></li>
                                                 @endif
