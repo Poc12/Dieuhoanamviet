@@ -21,27 +21,28 @@
                             </div>
                         </div>
                     </div>
-                    @if(@$menu && $menu[2])
-                        @foreach($menu[2] as $item)
+                    @if(isset($menu_footer))
+                        @foreach($menu_footer as $item)
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="tp-footer-widget footer-col-2 mb-50">
-                                <h4 class="tp-footer-widget-title">Về chúng tôi</h4>
+                                <h4 class="tp-footer-widget-title">{{@$item['name']}}</h4>
                                 <div class="tp-footer-widget-content">
                                     <ul>
-
-                                                @if($item['apply'] === 3)
-                                                    <li><a href="{{@$item['post_static']['slug']}}">{{@$item['name']}}</a></li>
+                                        @if($item['child'])
+                                            @foreach($item['child'] as $item_child)
+                                                @if($item_child['apply'] === 3)
+                                                    <li><a href="{{@$item_child['post_static']['slug']}}">{{@$item_child['name']}}</a></li>
                                                 @else
-                                                    <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
+                                                    <li><a href="{{get_link_cate(@$item_child['apply_rele']['slug'])}}">{{@$item_child['name']}}</a></li>
                                                 @endif
-
+                                             @endforeach
+                                        @endif
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         @endforeach
                     @endif
-
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="tp-footer-widget footer-col-4 mb-50">
                             <h4 class="tp-footer-widget-title">Liên hệ đặt hàng</h4>

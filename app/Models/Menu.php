@@ -131,6 +131,11 @@ class Menu extends BaseModel
         return $this->hasMany(Menu::class, 'id', 'parent_id');
     }
 
+    function child(): \Illuminate\Database\Eloquent\Relations\hasMany
+    {
+        return $this->hasMany(Menu::class, 'parent_id', 'id');
+    }
+
     function apply_rele(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(Category::class, 'id', 'apply_detail');
