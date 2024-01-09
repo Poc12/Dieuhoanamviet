@@ -34,8 +34,13 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
         $info = Config::query()->first();
         $menu = Menu::query()->where('status', BaseModel::getStatusActive())
-            ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])->get()->groupBy('type');
-
+            ->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static'])
+            ->get()->groupBy('type');
+        $menu_footer = Menu::query()->where([
+            'status' => BaseModel::getStatusActive(),
+            'type' => 2,
+            'parent_id' => 0
+            ])->with(['apply_rele', 'post_static', 'parent.apply_rele', 'parent.post_static','child'])->get();
         $cate = Category::query()->with('child')
             ->whereHas('child')
             ->active()
@@ -54,6 +59,7 @@ class AppServiceProvider extends ServiceProvider
         view()->share('info', $info);
         view()->share('categories_menu', $cate);
         view()->share('menu', $menu);
+        view()->share('menu_footer', $menu_footer);
 
     }
 
