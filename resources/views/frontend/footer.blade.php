@@ -21,36 +21,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="tp-footer-widget footer-col-3 mb-50">
-                            <h4 class="tp-footer-widget-title">Chính sách </h4>
-                            <div class="tp-footer-widget-content">
-                                <ul>
-                                    <li><a href="#">Vận chuyển</a></li>
-                                    <li><a href="#">Lắp đặt</a></li>
-                                    <li><a href="#">Bảo hành</a></li>
-                                </ul>
+                    @if(@$menu && $menu[2])
+                        @foreach($menu[2] as $item)
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="tp-footer-widget footer-col-2 mb-50">
+                                <h4 class="tp-footer-widget-title">Về chúng tôi</h4>
+                                <div class="tp-footer-widget-content">
+                                    <ul>
+
+                                                @if($item['apply'] === 3)
+                                                    <li><a href="{{@$item['post_static']['slug']}}">{{@$item['name']}}</a></li>
+                                                @else
+                                                    <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
+                                                @endif
+
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                        <div class="tp-footer-widget footer-col-2 mb-50">
-                            <h4 class="tp-footer-widget-title">Về chúng tôi</h4>
-                            <div class="tp-footer-widget-content">
-                                <ul>
-                                    @if(@$menu && $menu[2])
-                                        @foreach($menu[2] as $item)
-                                            @if($item['apply'] === 3)
-                                                <li><a href="{{@$item['post_static']['slug']}}">{{@$item['name']}}</a></li>
-                                            @else
-                                                <li><a href="{{get_link_cate(@$item['apply_rele']['slug'])}}">{{@$item['name']}}</a></li>
-                                            @endif
-                                        @endforeach
-                                    @endif
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
+
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="tp-footer-widget footer-col-4 mb-50">
                             <h4 class="tp-footer-widget-title">Liên hệ đặt hàng</h4>
