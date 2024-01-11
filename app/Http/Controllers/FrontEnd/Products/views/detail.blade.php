@@ -294,10 +294,7 @@
                                 @foreach($trending_product as $item)
                                 <div class="swiper-slide">
                                 <div class="tp-product-item-3 tp-product-style-primary mb-50">
-                                    <div class="tp-product-thumb-3 mb-15 fix p-relative z-index-1">
-                                        <a href="{{get_link_product($item['slug'])}}">
-                                            <img src="{{images_src($item['avatar'])}}" alt="">
-                                        </a>
+                                    <div class="tp-product-thumb-3 mb-15 fix p-relative z-index-1" onclick="window.location='{{get_link_product($item_pr['slug'])}}'" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover" >
                                         <!-- product action -->
                                         <div class="tp-product-action-3 tp-product-action-4 has-shadow tp-product-action-primaryStyle">
                                             <div class="tp-product-action-item-3 d-flex flex-column">
