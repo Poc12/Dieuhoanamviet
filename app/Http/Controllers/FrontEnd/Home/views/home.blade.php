@@ -84,10 +84,7 @@
                                             @foreach($product as  $item_pr)
                                                 <div class="col-xl-3 col-md-4 col-sm-4 p-1">
                                                 <div class="tp-product-item-2 mb-40">
-                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img"
-                                                         style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
-                                                        <a href="{{get_link_product($item_pr['slug'])}}">
-                                                        </a>
+                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img" onclick="window.location='{{get_link_product($item_pr['slug'])}}'" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                         <!-- product action -->
                                                         <div class="tp-product-action-2 tp-product-action-blackStyle">
                                                             <div class="tp-product-action-item-2 d-flex flex-column">
@@ -138,9 +135,9 @@
                                                 <div class="col-xl-12">
                                                     @foreach($product as  $item_pr)
                                                     <div class="tp-product-list-item d-md-flex">
-                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
-                                                            <a href="{{get_link_html($item_pr['slug'])}}">
-                                                            </a>
+                                                        <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix"
+                                                             onclick="window.location='{{get_link_product($item_pr['slug'])}}'"
+                                                             style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                             <!-- product action -->
                                                             <div class="tp-product-action-2 tp-product-action-blackStyle">
                                                                 <div class="tp-product-action-item-2 d-flex flex-column">
