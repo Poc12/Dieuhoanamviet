@@ -333,10 +333,12 @@
                                                     <div class="tp-product-category">
                                                         <a href="{{get_link_cate($item->category['slug'])}}">{{@$item->category['name']}}</a>
                                                     </div>
-                                                    <h3 class="tp-product-title">
-                                                        <a href="{{get_link_product($item['slug'])}}">{{$item['name']}}
-                                                        </a>
-                                                    </h3>
+                                                    <div class="mt-1" style="min-height: 48px">
+                                                        <h3 class="tp-product-title">
+                                                            <a href="{{get_link_product($item['slug'])}}">{{$item['name']}}
+                                                            </a>
+                                                        </h3>
+                                                    </div>
                                                     <div class="tp-product-price-wrapper">
                                                         <div class="tp-blog-btn">
                                                             <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
@@ -445,7 +447,7 @@
 
                                                     <p>{!! $item_p['description'] !!}</p>
 
-                                                    <div class="tp-blog-btn">
+                                                    <div class="tp-blog-btn" style="min-height: 48px">
                                                         <a href="{{get_link_html($item_p['slug'])}}" class="tp-btn-2 tp-btn-border-2">
                                                             Đọc thêm
                                                             <span>
