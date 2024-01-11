@@ -113,7 +113,7 @@
                                                         <div class="tp-product-tag-2">
                                                             <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
-                                                        <div class="mt-1" style="max-height: 100px">
+                                                        <div class="mt-1" style="min-height: 48px">
                                                             <h4 class="tp-product-title-2 sp-line-2">
                                                                 <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
                                                             </h4>
