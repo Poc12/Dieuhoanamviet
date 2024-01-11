@@ -113,9 +113,12 @@
                                                         <div class="tp-product-tag-2">
                                                             <a href="{{get_link_cate($item_pr->category->slug)}}">{{@$item_pr->category->name}}</a>
                                                         </div>
-                                                        <h4 class="tp-product-title-2 sp-line-2">
-                                                            <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
-                                                        </h4>
+                                                        <div class="mt-1" style="max-height: 100px">
+                                                            <h4 class="tp-product-title-2 sp-line-2">
+                                                                <a href="{{get_link_product($item_pr['slug'])}}">{{$item_pr['name']}}</a>
+                                                            </h4>
+                                                        </div>
+
                                                         <div class="tp-product-price-wrapper-2 mt-4">
                                                             <div class="tp-blog-btn">
                                                                 <a href="{{route('fe.contact')}}" class="tp-btn-2 tp-btn-border-2">Liên hệ</a>
