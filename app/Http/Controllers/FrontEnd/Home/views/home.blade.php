@@ -221,6 +221,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61555199346797&amp;mibextid=LQQJ4d" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=61555199346797&amp;mibextid=LQQJ4d" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61555199346797&amp;mibextid=LQQJ4d">Công ty TNHH Tư Vấn Thiết Kế &amp; Thương Mại Dịch Vụ Nam Việt</a></blockquote></div>
                         </div>
                     </div>
 
@@ -479,6 +480,8 @@
     </main>
 @endsection
 @push('JS')
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0&appId=907341210482344" nonce="mhpUz0tO"></script>
     <script>
         function searchByPrice(){
             let amount = $('#amount').val();
