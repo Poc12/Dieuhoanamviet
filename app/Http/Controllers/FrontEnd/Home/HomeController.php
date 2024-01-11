@@ -36,6 +36,7 @@ class HomeController extends FrontEndController
             ->typeOfficial()->active()->whereNotIn('id', $pluck)->orderBy('stt')->get();
         $all_product = ProductModel::query()
             ->typeOfficial()
+            ->orderBy('stt','ASC')
             ->active();
         $this->fillter_query($all_product,$request);
         $all_product = $all_product->paginate($this->per_page);
