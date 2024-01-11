@@ -444,10 +444,11 @@
                                                     <h5 class="tp-blog-title">
                                                         <a href="{{get_link_html($item_p['slug'])}}">{{$item_p['name']}}</a>
                                                     </h5>
+                                                    <div class="mt-1" style="min-height: 48px">
+                                                        <p class="sp-line-2">{!! $item_p['description'] !!}</p>
+                                                    </div>
 
-                                                    <p>{!! $item_p['description'] !!}</p>
-
-                                                    <div class="tp-blog-btn" style="min-height: 48px">
+                                                    <div class="tp-blog-btn" >
                                                         <a href="{{get_link_html($item_p['slug'])}}" class="tp-btn-2 tp-btn-border-2">
                                                             Đọc thêm
                                                             <span>
