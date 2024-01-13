@@ -242,6 +242,19 @@ if (! function_exists('get_link_html')) {
     }
 }
 
+
+if (! function_exists('get_link_share_facebook')) {
+    function get_link_share_facebook($link): string
+    {
+        if(!$link) {
+            return 'javascript:void(0)';
+        }
+        return 'http://www.facebook.com/share.php?u=https://dieuhoanamviet.com/'.$link.'.html';
+    }
+}
+
+
+
 if (! function_exists('get_link_cate')) {
     function get_link_cate($link = ''): string
     {

@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="tp-product-details-social">
                                     <span>Chia sẻ: </span>
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="{{get_link_share_facebook(@$product['slug'])}}"><i class="fa-brands fa-facebook-f"></i></a>
                                     <a href="#"><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                                 <div class="tp-product-details-msg mb-15">
