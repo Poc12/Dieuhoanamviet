@@ -286,7 +286,7 @@ li,
 	typography css start 
 ---------------------------------*/
 body {
-  font-family: 'Muli-B';
+  font-family: var(--tp-ff-fontawesome);
   font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
