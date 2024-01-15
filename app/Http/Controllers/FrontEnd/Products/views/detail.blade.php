@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="tp-product-details-social">
                                     <span>Chia sẻ: </span>
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="{{get_link_share_facebook(@$product['slug'])}}"><i class="fa-brands fa-facebook-f"></i></a>
                                     <a href="#"><i class="fa-solid fa-envelope"></i></a>
                                 </div>
                                 <div class="tp-product-details-msg mb-15">
@@ -154,7 +154,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade show active" id="nav-addInfo" role="tabpanel" aria-labelledby="nav-addInfo-tab" tabindex="0">
+                                    <div class="tab-pane fade " id="nav-addInfo" role="tabpanel" aria-labelledby="nav-addInfo-tab" tabindex="0">
 
                                         <div class="tp-product-details-additional-info ">
                                             <div class="row justify-content-center">
@@ -175,7 +175,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabindex="0">
+                                    <div class="tab-pane fade show active" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabindex="0">
                                         <div class="tp-product-details-review-wrapper pt-60">
                                             <div class="row">
                                                 <div class="col-lg-6">
@@ -294,7 +294,7 @@
                                 @foreach($trending_product as $item)
                                 <div class="swiper-slide">
                                 <div class="tp-product-item-3 tp-product-style-primary mb-50">
-                                    <div class="tp-product-thumb-3 mb-15 fix p-relative z-index-1" onclick="window.location='{{get_link_product($item_pr['slug'])}}'" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover" >
+                                    <div class="tp-product-thumb-3 mb-15 fix p-relative z-index-1" onclick="window.location='{{get_link_product($item['slug'])}}'" style="background: url('{{images_src($item['avatar'])}}');height: 12rem;background-size: cover" >
                                         <!-- product action -->
                                         <div class="tp-product-action-3 tp-product-action-4 has-shadow tp-product-action-primaryStyle">
                                             <div class="tp-product-action-item-3 d-flex flex-column">
