@@ -14,7 +14,7 @@
                                 <p class="tp-footer-desc">Chúng tôi đảm bảo đem tới khách hàng chất lượng dịch vụ tốt nhất</p>
                                 <div class="tp-footer-social">
                                     <a href="{{@$info['facebook']}}"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="http://zalo.me/{{trim(@$info['phone'])}}">
+                                    <a href="http://zalo.me/{{trim(@$info['zalo'])}}">
                                         <svg id="changeColor" fill="#DC7633" xmlns="http://www.w3.org/2000/svg"
                                                              xmlns:xlink="http://www.w3.org/1999/xlink" width="39" viewBox="0 0 375 374.9999"
                                                              height="39" version="1.0"><defs><path id="pathAttribute"
