@@ -229,6 +229,7 @@ li,
   --tp-ff-roboto: 'Roboto', sans-serif;
   --tp-ff-oregano: 'Oregano', cursive;
   --tp-ff-charm: 'Charm', cursive;
+  --tp-ff-lexend: 'Lexend', sans-serif;
   /**
   @color declaration
   */
@@ -286,7 +287,7 @@ li,
 	typography css start 
 ---------------------------------*/
 body {
-  font-family: 'Lexend', sans-serif;
+  font-family: var(--tp-ff-lexend);
   font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
@@ -303,7 +304,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--tp-ff-heading);
+  font-family: var(--tp-ff-lexend);
   color: var(--tp-heading-primary);
   margin-top: 0px;
   font-weight: 700;
@@ -345,7 +346,8 @@ ul {
 }
 
 p {
-  font-family: var(--tp-ff-p);
+  /*font-family: var(--tp-ff-p);*/
+  font-family: var(--tp-ff-lexend);
   font-size: 14px;
   font-weight: 400;
   color: var(--tp-text-body);
@@ -1050,7 +1052,8 @@ div.demo img {
   position: absolute;
   content: "\f00c";
   font-weight: 600;
-  font-family: var(--tp-ff-fontawesome);
+  /*font-family: var(--tp-ff-fontawesome);*/
+  font-family: var(--tp-ff-lexend);
   color: var(--tp-common-white);
   font-size: 16px;
   left: 50%;
@@ -1131,7 +1134,7 @@ div.demo img {
 /*----------------------------------------*/
 .tp-btn {
   display: inline-block;
-  font-family: var(--tp-ff-jost);
+  font-family: var(--tp-ff-lexend);
   font-weight: 400;
   font-size: 16px;
   background-color: var(--tp-common-black);
@@ -1144,7 +1147,8 @@ div.demo img {
   background-color: transparent;
 }
 .tp-btn-2 { /* for home electronic */
-  font-family: var(--tp-ff-roboto);
+  /*font-family: var(--tp-ff-roboto);*/
+  font-family: var(--tp-ff-lexend);
   font-weight: 500;
   font-size: 14px;
   background-color: var(--tp-theme-primary);
@@ -1250,7 +1254,7 @@ div.demo img {
   color: var(--tp-common-white);
   background: var(--tp-theme-primary);
   text-align: center;
-  font-family: var(--tp-ff-space);
+  font-family: var(--tp-ff-lexend);
   padding: 9px 22px;
   letter-spacing: -0.02em;
   position: relative;
@@ -1529,7 +1533,7 @@ div.demo img {
 }
 .tp-menu-showcase-btn-2 {
   border-radius: 6px;
-  font-family: var(--tp-ff-roboto);
+  font-family: var(--tp-ff-lexend);
 }
 .tp-menu-showcase-btn:hover {
   background-color: var(--tp-common-black);
@@ -2490,7 +2494,7 @@ div.demo img {
   content: "\f107";
   top: 50%;
   right: 0;
-  font-family: var(--tp-ff-fontawesome);
+  font-family: var(--tp-ff-lexend);
   color: var(--tp-common-black);
   font-weight: 500;
   pointer-events: none;

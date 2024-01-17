@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/font-awesome-pro.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/flaticon_shofy.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/spacing.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/main.css?v=1234')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/main.css?v=123413')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap" rel="stylesheet">

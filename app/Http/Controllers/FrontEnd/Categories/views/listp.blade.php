@@ -182,7 +182,7 @@
     </section>
     <!-- shop area end -->
     <!-- subscribe area start -->
-    @include('frontend.subscriber')
+{{--    @include('frontend.subscriber')--}}
     <!-- subscribe area end -->
 @endsection
 
