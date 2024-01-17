@@ -286,7 +286,7 @@ li,
 	typography css start 
 ---------------------------------*/
 body {
-  font-family: var(--tp-ff-roboto);
+  font-family: 'Lexend', sans-serif;
   font-size: 14px;
   font-weight: normal;
   color: var(--tp-text-body);
