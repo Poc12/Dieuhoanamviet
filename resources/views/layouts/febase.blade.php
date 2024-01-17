@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/font-awesome-pro.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/flaticon_shofy.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/spacing.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('shofy/assets/css/main.css?v='.time())}}">
     <!-- GOOGLE FONTS-->
     <link href="{{url('core/io.css')}}" id="app-style" rel="stylesheet" type="text/css" />
 
