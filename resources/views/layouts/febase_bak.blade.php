@@ -92,7 +92,7 @@
 <script src="{{url('assets/js/bootstrap-notify.min.js')}}"></script>
 <script src="{{url('assets/js/jquery.fancybox.min.js')}}"></script>
 
-<script src="{{url('core/io.js')}}"></script>
+<script src="{{url('core/io.js?v='.time())}}"></script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2LLK2513F"></script>

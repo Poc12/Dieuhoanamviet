@@ -276,6 +276,7 @@ function INIT_TINYMCE(element = 'tinymce', height, _tool_bar_small, readonly = 0
         urlconverter_callback: function (url, node, on_save, name) {
             return url;
         },
+        content_style: "body { font-family: Lexend; }",
         entity_encoding: "raw",
         menubar: true,//không hiển thị menu bar,
         fix_list_elements: true,

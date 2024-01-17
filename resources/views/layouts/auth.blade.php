@@ -62,7 +62,7 @@
 <script src="{{url('assets/js/bootstrap-notify.min.js')}}"></script>
 <!-- App js -->
 <script src="{{url('assets/js/app.js')}}"></script>
-<script src="{{url('core/io.js')}}"></script>
+<script src="{{url('core/io.js?v='.time())}}"></script>
 
 @yield('JS')
 
