@@ -146,7 +146,7 @@
         </div>
     </section>
     <!-- contact area end -->
-    @include('frontend.subscriber')
+{{--    @include('frontend.subscriber')--}}
 
 @endsection
 
