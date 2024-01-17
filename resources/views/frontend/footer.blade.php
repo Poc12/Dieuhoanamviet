@@ -87,6 +87,12 @@
                                             </p>
                                         </div>
                                     </div>
+                                    <div class="tp-footer-contact-item d-flex align-items-start">
+                                        <div class="tp-footer-contact-content">
+                                            <img width="140px" src="{{url('/assets/images/logo_cong_thuong.png')}}" alt="">
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
