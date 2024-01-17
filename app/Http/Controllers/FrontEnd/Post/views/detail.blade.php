@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-xl-9 col-lg-8">
                     <div class="tp-postbox-details-main-wrapper">
-                        <div class="tp-postbox-details-content" style="font-family: 'Lexend', sans-serif">
+                        <div class="tp-postbox-details-content" style="font-family: 'Lexend', sans-serif !important;">
                             {!! @$post['content'] !!}
                             <div class="tp-postbox-details-share-wrapper">
                                 <div class="row">
