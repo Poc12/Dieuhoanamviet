@@ -96,7 +96,7 @@
                                                 @foreach($product as  $item_pr)
                                                     <div class="tp-product-list-item d-md-flex">
                                                         <div class="tp-product-thumb-2 tp-product-thumb-2 p-relative fix"
-                                                             onclick="window.location='{{get_link_product($item['slug'])}}'"
+                                                             onclick="window.location='{{get_link_product($item_pr['slug'])}}'"
                                                              style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                             <!-- product action -->
                                                             <div class="tp-product-action-2 tp-product-action-blackStyle">
