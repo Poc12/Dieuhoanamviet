@@ -249,7 +249,7 @@ if (! function_exists('get_link_share_facebook')) {
         if(!$link) {
             return 'javascript:void(0)';
         }
-        return 'http://www.facebook.com/share.php?u=https://dieuhoanamviet.com/'.$link.'.p';
+        return 'http://www.facebook.com/share.php?u=https://dieuhoanamviet.com/'.$link.'.html';
     }
 }
 
