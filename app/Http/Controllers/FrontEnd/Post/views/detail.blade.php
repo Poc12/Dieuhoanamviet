@@ -10,11 +10,6 @@
             <div class="row">
                 <div class="col-xl-9">
                     <div class="tp-postbox-details-top">
-                        <div class="tp-postbox-details-category">
-                           <span>
-                              <a href="#">{{$post['category']['name']}}</a>
-                           </span>
-                        </div>
                         <h3 class="tp-postbox-details-title">{{$post['name']}}</h3>
                         <div class="tp-postbox-details-meta mb-50">
                             <span>
