@@ -23,7 +23,7 @@
                 <div class="tp-sidebar-blog-item d-flex align-items-center">
                     <div class="tp-sidebar-blog-thumb">
                         <a href="{{get_link_html($postItem['slug'])}}">
-                            <img src="{{get_link_html($postItem['slug'])}}" alt="{{$postItem['name']}}">
+                            <img src="{{show_img($item['avatar'])}}" alt="{{$postItem['name']}}">
                         </a>
                     </div>
                     <div class="tp-sidebar-blog-content">
@@ -31,7 +31,7 @@
                             <span>{{$postItem['created_at']}}</span>
                         </div>
                         <h4 class="tp-sidebar-blog-title">
-                            <a href="{{get_link_html($postItem['slug'])}}l">{{$postItem['name']}}</a>
+                            <a href="{{get_link_html($postItem['slug'])}}">{{$postItem['name']}}</a>
                         </h4>
                     </div>
                 </div>
