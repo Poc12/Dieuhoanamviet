@@ -23,7 +23,7 @@
                 <div class="tp-sidebar-blog-item d-flex align-items-center">
                     <div class="tp-sidebar-blog-thumb">
                         <a href="{{get_link_html($postItem['slug'])}}">
-                            <img src="{{show_img($item['avatar'])}}" alt="{{$postItem['name']}}">
+                            <img src="{{show_img($postItem['avatar'])}}" alt="{{$postItem['name']}}">
                         </a>
                     </div>
                     <div class="tp-sidebar-blog-content">
