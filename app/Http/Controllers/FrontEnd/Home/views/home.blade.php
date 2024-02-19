@@ -238,10 +238,6 @@
                         <div class="tp-banner-item tp-banner-height p-relative mb-30 z-index-1 fix">
                             <div class="tp-banner-thumb include-bg transition-3" data-background="{{url('assets/images/banner1.png')}}"></div>
                             <div class="tp-banner-content">
-                                <span>Giao hàng nhanh chóng</span>
-                                <h4 class="tp-banner-title">
-                                    <a href="{{route('fe.contact')}}">Cam kết chất lượng sản phẩm </a>
-                                </h4>
                                 <div class="tp-banner-btn">
                                     <a href="{{route('fe.contact')}}" class="tp-link-btn">Liên hệ
                                         <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
