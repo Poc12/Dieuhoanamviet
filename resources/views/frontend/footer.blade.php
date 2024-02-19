@@ -8,7 +8,7 @@
                             <div class="tp-footer-widget-content">
                                 <div class="tp-footer-logo">
                                     <a href="/">
-                                        <img width="86" height="68" src="{{url('assets/images/logo.jpg') }}" alt="logo">
+                                        <img width="200"  src="{{url('assets/images/logo2.png') }}" alt="logo">
                                     </a>
                                 </div>
                                 <p class="tp-footer-desc">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ THƯƠNG MẠI DỊCH VỤ NAM VIỆT</p>

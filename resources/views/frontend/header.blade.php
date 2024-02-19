@@ -65,7 +65,7 @@
                         <div class="col-xl-2 col-lg-2">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
+                                    <img src="{{url('assets/images/logo2.png') }}"  width="200" alt="logo">
                                 </a>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                 <div class="col-xl-3 col-lg-3 col-md-3 col-6">
                     <div class="logo">
                         <a href="/">
-                            <img src="{{url('assets/images/logo.jpg') }}"  width="86" height="68" alt="logo">
+                            <img src="{{url('assets/images/logo2.png') }}"  width="86" height="68" alt="logo">
                         </a>
                     </div>
                 </div>

@@ -4,16 +4,16 @@
     <div class="navbar-brand-box">
         <a href="{{route('home')}}" class="logo logo-dark text-center">
                         <span class="logo-sm fw-bold" style="font-size: 20px !important;">
-                           <img width="60" src="{{url('assets/images/logo.jpg')}}" alt="logo">
+                           <img width="60" src="{{url('assets/images/logo2.png')}}" alt="logo">
                         </span>
             <span class="logo-lg fw-bold" style="font-size: 20px !important;">
-             <img width="130" src="{{url('assets/images/logo.jpg')}}" alt="logo">
+             <img width="130" src="{{url('assets/images/logo2.png')}}" alt="logo">
                         </span>
         </a>
 
         <a href="{{route('home')}}" class="logo logo-light">
                         <span class="logo-sm fw-bold" style="font-size: 20px !important;">
-                       <img width="60" src="{{url('assets/images/logo.jpg')}}" alt="logo">
+                       <img width="60" src="{{url('assets/images/logo2.png')}}" alt="logo">
                         </span>
             <span class="logo-lg fw-bold" style="font-size: 20px !important;">
                 <img width="60" src="{{url('assets/images/logo.png')}}" alt="logo">
