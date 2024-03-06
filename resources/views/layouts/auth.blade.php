@@ -32,7 +32,7 @@
             <div class="card">
                 <div class="card-body p-4">
                     <div class="text-center mt-2">
-                        <img src="{{url('assets/images/logo.jpg')}}" alt="" height="60" class="logo">
+                        <img src="{{url('assets/images/logo2.png')}}" alt="" height="60" class="logo">
                     </div>
 
                     <div class="text-center mt-2">
