@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="tp-footer-contact-item d-flex align-items-start">
                                         <div class="tp-footer-contact-content">
-                                            <img width="140px" src="{{url('/assets/images/logo_cong_thuong.png')}}" alt="">
+                                            <img width="140px" src="{{url('/assets/images/logo-da-thong-bao-bo-cong-thuong-mau-xanh.png')}}" alt="">
                                         </div>
                                     </div>
                                 </div>
