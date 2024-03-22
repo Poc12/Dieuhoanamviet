@@ -356,7 +356,7 @@
         </section>
         <!-- product arrival area end -->
         <!-- product banner area start -->
-        <!-- <div class="tp-product-banner-area pb-20">
+        <div class="tp-product-banner-area pb-20">
             <div class="container">
                 <div class="tp-product-banner-slider fix">
                     <div class="tp-product-banner-slider-active swiper-container">
@@ -395,7 +395,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- product banner area end -->
 
         <!-- blog area start -->
