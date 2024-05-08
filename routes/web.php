@@ -5,6 +5,7 @@ use App\Http\Controllers\FrontEnd\Categories\CategoriesController;
 use App\Http\Controllers\FrontEnd\Contact\ContactController;
 use App\Http\Controllers\FrontEnd\Customer\CustomerController;
 use App\Http\Controllers\FrontEnd\Home\HomeController;
+use App\Http\Controllers\FrontEnd\Home\ShoppingCart;
 use App\Http\Controllers\FrontEnd\Post\PostController;
 use App\Http\Controllers\FrontEnd\Products\ProductController;
 use App\Http\Controllers\FrontEnd\Sitemap\SitemapController;
@@ -33,6 +34,7 @@ Route::any('/{cmd?}.html', [PostController::class, 'index_post'])->name('fe.post
 Route::any('/{cmd?}.c', [CategoriesController::class, 'check_list'])->name('fe.category');
 Route::any('/{cmd?}.p', [ProductController::class, 'index_products'])->name('fe.products');
 Route::any('/products/{cmd?}', [ProductController::class, 'index'])->name('fe.products_action');
+Route::any('/cart-shop/{cmd?}', [ShoppingCart::class, 'index'])->name('fe.cart');
 Route::any('/comment/{cmd?}', [PostController::class, 'ajax_save'])->name('fe.comment');
 Route::any('/sitemap', [SitemapController::class, 'index'])->name('sitemap');
 Route::any('/cmp/{cmd?}', [ProductController::class, 'ajax_save'])->name('fe.cmp');
