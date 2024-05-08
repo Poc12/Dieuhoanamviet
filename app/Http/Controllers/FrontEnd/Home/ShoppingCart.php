@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\FrontEnd\Home;
 
 use App\Hps\eJson;
+use App\Hps\eView;
 use App\Http\Controllers\FrontEndController;
 use App\Models\ProductModel;
+use App\Models\PurchaseOrderModel;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Http\Request;
@@ -20,6 +22,34 @@ class ShoppingCart extends FrontEndController
         $this->seo()->setTitle('Trang chủ');
         SEOMeta::setKeywords('Trang chủ');
         $this->seo()->setDescription('Trang chủ của website này là nơi đầu tiên mà khách hàng sẽ đến khi truy cập vào trang web của chúng tôi. Tại đây, bạn sẽ tìm thấy một tầm nhìn tổng quan về sản phẩm hoặc dịch vụ của chúng tôi cùng với những thông tin mới nhất và những sản phẩm được quảng cáo đặc biệt.');
+    }
+
+    function list(Request $request)
+    {
+        $tpl = [];
+        $cart = unserialize($_COOKIE['shopping_cart']);
+        $tpl['cart'] = $cart;
+        $tpl['total'] = count($cart);
+        return eView::getInstance()->setView($this->dir, 'cart', $tpl);
+    }
+
+    function ajax_save_order(Request $request)
+    {
+        $product = $request->get('product_id');
+        if (!$product){
+            eJson::getInstance()->getJsonSuccess('Thêm sản phẩm để thanh toán', []);
+        }
+        foreach ($product as $item){
+            PurchaseOrderModel::query()->insert([
+                'product_id' => $item,
+                'price' => 0,
+                'real_price' => 0,
+                'created_at' => time(),
+                'status' => 'Chờ giao hàng'
+            ]);
+        }
+        unset($_COOKIE['shopping_cart']);
+        eJson::getInstance()->getJsonSuccess('Đặt hàng thành công', []);
     }
 
     public function add_cart(Request $request)
@@ -54,7 +84,7 @@ class ShoppingCart extends FrontEndController
         {
             $products = ProductModel::query()->find($prod_id);
             $prod_name = $products->name;
-            $prod_image = $products->image;
+            $prod_image = images_src($products->avatar) ;
             $priceval = $products->price;
             if($products)
             {

@@ -486,24 +486,25 @@
                             <button type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
                         </div>
                     </div>
+                    <div class="cartmini__empty text-center" id="empty_cart">
+                        <img src="{{url('shofy/assets/img/product/cartmini/empty-cart.png')}} " alt="">
+                        <p>Giỏ hàng trống </p>
+                        <a class="tp-btn cartmini-close-btn">Mua hàng</a>
+                    </div>
                     <div class="cartmini__widget" id="cart_area">
                     </div>
                     <!-- for wp -->
                     <!-- if no item in cart -->
-                    <div class="cartmini__empty text-center d-none">
-                        <img src="{{url('shofy/assets/img/product/cartmini/empty-cart.png')}} " alt="">
-                        <p>Giỏ hàng trống </p>
-                        <a href="shop.html" class="tp-btn">Go to Shop</a>
-                    </div>
+
                 </div>
                 <div class="cartmini__checkout">
                     <div class="cartmini__checkout-title mb-30">
                         <h4>Tổng cộng :</h4>
-                        <span id="total_product"></span>
+                        <form id="total_product"></form>
                     </div>
                     <div class="cartmini__checkout-btn">
                         <a href="" class="tp-btn mb-10 w-100">Làm mới giỏ</a>
-                        <a href="" class="tp-btn tp-btn-border w-100">Đặt hàng</a>
+                        <a href="{{route('fe.cart',['cmd'=> 'list'])}}" class="tp-btn tp-btn-border w-100">Đặt hàng</a>
                     </div>
                 </div>
             </div>
@@ -546,17 +547,19 @@
                             let doc = $('#cart_area')
                             let html =``;
                             let cart = res.result.data
+
                             doc.empty()
                             $.map(cart, function (val) {
                                 html +=`<div class="cartmini__widget-item">
                                         <div class="cartmini__thumb">
                                             <a href="product-details.html">
-                                                <img src="" alt="">
+                                                <img src="${val.item_image}" alt="${val.item_name}">
                                             </a>
                                         </div>
                                         <div class="cartmini__content">
                                             <h5 class="cartmini__title"><a href="product-details.html">${val.item_name}</a></h5>
                                             <div class="cartmini__price-wrapper">
+                                                <input type="hidden" name="product_id" value="${val.item_id}">
                                                 <span class="cartmini__price">${val.item_price} VNĐ</span>
                                                 <span class="cartmini__quantity">Số lượng 1</span>
                                             </div>
@@ -564,6 +567,9 @@
                                         <a onclick="Delete_item(${val.item_id})" class="cartmini__del"><i class="fa-regular fa-xmark"></i></a>
                                         </div>`
                             })
+                            if (res.result.total > 0){
+                                $("#empty_cart").addClass("d-none")
+                            }
                             doc.append(html)
                             $('#total_product').append(res.result.total+' Sản phẩm')
                         }
