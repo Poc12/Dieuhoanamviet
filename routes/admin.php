@@ -11,6 +11,7 @@ use App\Http\Controllers\BackEnd\Auth\LoginController;
 use App\Http\Controllers\BackEnd\Auth\RegisterController;
 use App\Http\Controllers\BackEnd\Menu\MenuController;
 use App\Http\Controllers\BackEnd\Post\PostController;
+use App\Http\Controllers\BackEnd\Post\OrderController;
 use App\Http\Controllers\BackEnd\Statics\StaticsController;
 use App\Http\Controllers\BackEnd\Product\ProductController;
 use App\Http\Controllers\BackEnd\Subscriber\SubscriberController;
@@ -49,6 +50,7 @@ Route::prefix('admin')->group(function (){
         Route::any('/categories/{cmd?}', [CategoriesController::class, 'index'])->name('categories');
         Route::any('/statics/{cmd?}', [StaticsController::class, 'index'])->name('statics');
         Route::any('/post/{cmd?}', [PostController::class, 'index'])->name('post');
+        Route::any('/post/{cmd?}', [OrderController::class, 'index'])->name('order');
         Route::any('/contact/{cmd?}', [ContactController::class, 'index'])->name('contact');
     });
 });
