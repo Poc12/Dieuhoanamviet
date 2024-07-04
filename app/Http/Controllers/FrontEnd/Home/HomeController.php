@@ -24,6 +24,7 @@ class HomeController extends FrontEndController
     }
 
     function list(Request $request){
+        $ip = $_SERVER['REMOTE_ADDR'];
         $banner = Banner::query()->active()->get();
         $trending_product= ProductModel::query()->with('category')->typeOfficial()->active()->orderBy('stt')->limit(6)->get();
         $new_product = ProductModel::query()->typeOfficial()->active()->orderByDesc('created_at')->limit(3)->get();
@@ -51,7 +52,8 @@ class HomeController extends FrontEndController
             'videos' => $videos,
             'posts' => $posts,
             'category' => $all_category,
-            'new_product' => $new_product
+            'new_product' => $new_product,
+            'ip_client' => $ip
         ];
         return eView::getInstance()->setView($this->dir, 'home', $tpl);
     }

@@ -55,7 +55,7 @@
                             <h4 class="tp-footer-widget-title">CÔNG TY TNHH TƯ VẤN THIẾT KẾ VÀ THƯƠNG MẠI DỊCH VỤ NAM VIỆT</h4>
                             <div class="tp-footer-widget-content">
                                 <div class="tp-footer-talk mb-20">
-                                    <p>Hotline<a>: 0962 236 357  / 0363 247 078 /  0889 228 799</a></p>
+                                    <p>Hotline<a>: 0889 228 799</a></p>
                                     <p>Website<a>: https://dieuhoanamviet.com</a></p>
                                 </div>
                                 <div class="tp-footer-contact">

@@ -84,11 +84,13 @@
                                             @foreach($product as  $item_pr)
                                                 <div class="col-xl-3 col-md-4 col-sm-4 p-1">
                                                 <div class="tp-product-item-2 mb-40">
-                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img" onclick="window.location='{{get_link_product($item_pr['slug'])}}'" style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
+                                                    <div class="tp-product-thumb-2 p-relative z-index-1 fix w-img"
+{{--                                                         onclick="window.location='{{get_link_product($item_pr['slug'])}}'" --}}
+                                                         style="background: url('{{images_src($item_pr['avatar'])}}');height: 12rem;background-size: cover">
                                                         <!-- product action -->
                                                         <div class="tp-product-action-2 tp-product-action-blackStyle">
                                                             <div class="tp-product-action-item-2 d-flex flex-column">
-                                                                <button type="button" class="tp-product-action-btn-2 tp-product-add-cart-btn">
+                                                                <button type="button" class="tp-product-action-btn-2 tp-product-add-cart-btn" onclick="AddToCard('{{$item_pr->id}}')">
                                                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M3.34706 4.53799L3.85961 10.6239C3.89701 11.0923 4.28036 11.4436 4.74871 11.4436H4.75212H14.0265H14.0282C14.4711 11.4436 14.8493 11.1144 14.9122 10.6774L15.7197 5.11162C15.7384 4.97924 15.7053 4.84687 15.6245 4.73995C15.5446 4.63218 15.4273 4.5626 15.2947 4.54393C15.1171 4.55072 7.74498 4.54054 3.34706 4.53799ZM4.74722 12.7162C3.62777 12.7162 2.68001 11.8438 2.58906 10.728L1.81046 1.4837L0.529505 1.26308C0.181854 1.20198 -0.0501969 0.873587 0.00930333 0.526523C0.0705036 0.17946 0.406255 -0.0462578 0.746256 0.00805037L2.51426 0.313534C2.79901 0.363599 3.01576 0.5995 3.04042 0.888012L3.24017 3.26484C15.3748 3.26993 15.4139 3.27587 15.4726 3.28266C15.946 3.3514 16.3625 3.59833 16.6464 3.97849C16.9303 4.35779 17.0493 4.82535 16.9813 5.29376L16.1747 10.8586C16.0225 11.9177 15.1011 12.7162 14.0301 12.7162H14.0259H4.75402H4.74722Z" fill="currentColor"/>
                                                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6629 7.67446H10.3067C9.95394 7.67446 9.66919 7.38934 9.66919 7.03804C9.66919 6.68673 9.95394 6.40161 10.3067 6.40161H12.6629C13.0148 6.40161 13.3004 6.68673 13.3004 7.03804C13.3004 7.38934 13.0148 7.67446 12.6629 7.67446Z" fill="currentColor"/>
@@ -472,6 +474,43 @@
 {{--        @include('frontend.subscriber')--}}
         <!-- subscribe area end -->
 
+        <!-- cart mini area start -->
+        <div class="cartmini__area tp-all-font-roboto">
+            <div class="cartmini__wrapper d-flex justify-content-between flex-column">
+                <div class="cartmini__top-wrapper">
+                    <div class="cartmini__top p-relative">
+                        <div class="cartmini__top-title">
+                            <h4>Giỏ hàng của bạn</h4>
+                        </div>
+                        <div class="cartmini__close">
+                            <button type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="cartmini__empty text-center" id="empty_cart">
+                        <img src="{{url('shofy/assets/img/product/cartmini/empty-cart.png')}} " alt="">
+                        <p>Giỏ hàng trống </p>
+                        <a class="tp-btn cartmini-close-btn">Mua hàng</a>
+                    </div>
+                    <div class="cartmini__widget" id="cart_area">
+                    </div>
+                    <!-- for wp -->
+                    <!-- if no item in cart -->
+
+                </div>
+                <div class="cartmini__checkout">
+                    <div class="cartmini__checkout-title mb-30">
+                        <h4>Tổng cộng :</h4>
+                        <form id="total_product"></form>
+                    </div>
+                    <div class="cartmini__checkout-btn">
+                        <a href="" class="tp-btn mb-10 w-100">Làm mới giỏ</a>
+                        <a href="{{route('fe.cart',['cmd'=> 'list'])}}" class="tp-btn tp-btn-border w-100">Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cart mini area end -->
+
 
     </main>
 @endsection
@@ -487,6 +526,59 @@
             }
             form.append('<input type=hidden value="' + amount + '" name="price" />');
             form.submit();
+        }
+        
+        function AddToCard(product_id) {
+            let url = '{{route('fe.cart',['cmd'=> 'add_cart'])}}'
+            url = setUrlParameters(url,'product_id',product_id)
+            _POST_FORM('',url,{callback:function (res){
+                    if (res.status === 200) {
+                        show_alert_success('Thêm sản phẩm thành công !')
+                    }
+                }})
+
+        }
+
+        function getShopCart(){
+            let url = '{{route('fe.cart',['cmd'=> 'load_cart'])}}'
+            _POST_FORM('',url,{callback:function (res){
+                    if (res.status === 200){
+                        if (res.result.data){
+                            let doc = $('#cart_area')
+                            let html =``;
+                            let cart = res.result.data
+
+                            doc.empty()
+                            $.map(cart, function (val) {
+                                html +=`<div class="cartmini__widget-item">
+                                        <div class="cartmini__thumb">
+                                            <a href="product-details.html">
+                                                <img src="${val.item_image}" alt="${val.item_name}">
+                                            </a>
+                                        </div>
+                                        <div class="cartmini__content">
+                                            <h5 class="cartmini__title"><a href="product-details.html">${val.item_name}</a></h5>
+                                            <div class="cartmini__price-wrapper">
+                                                <input type="hidden" name="product_id" value="${val.item_id}">
+                                                <span class="cartmini__price">${val.item_price} VNĐ</span>
+                                                <span class="cartmini__quantity">Số lượng 1</span>
+                                            </div>
+                                        </div>
+                                        <a onclick="Delete_item(${val.item_id})" class="cartmini__del"><i class="fa-regular fa-xmark"></i></a>
+                                        </div>`
+                            })
+                            if (res.result.total > 0){
+                                $("#empty_cart").addClass("d-none")
+                            }
+                            doc.append(html)
+                            $('#total_product').append(res.result.total+' Sản phẩm')
+                        }
+                    }
+                }})
+        }
+
+        function Delete_item(id){
+
         }
     </script>
 @endpush

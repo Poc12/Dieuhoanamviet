@@ -69,7 +69,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-xl-9 col-lg-9">
+                        <div class="col-xl-8 col-lg-8">
                             <div class="main-menu menu-style-1">
                                 <nav class="tp-main-menu-content">
                                     <ul>
@@ -133,6 +133,22 @@
                                         <li><a href="{{route('fe.contact')}}">LIÊN HỆ</a></li>
                                     </ul>
                                 </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="tp-header-main-right d-flex align-items-center justify-content-end">
+                                <div class="tp-header-action d-flex align-items-center ml-50">
+                                    <div class="tp-header-action-item">
+                                        <button type="button" class="tp-header-action-btn cartmini-open-btn" onclick="getShopCart()">
+                                            <svg width="35" height="35" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.48626 20.5H14.8341C17.9004 20.5 20.2528 19.3924 19.5847 14.9348L18.8066 8.89359C18.3947 6.66934 16.976 5.81808 15.7311 5.81808H5.55262C4.28946 5.81808 2.95308 6.73341 2.4771 8.89359L1.69907 14.9348C1.13157 18.889 3.4199 20.5 6.48626 20.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M6.34902 5.5984C6.34902 3.21232 8.28331 1.27803 10.6694 1.27803V1.27803C11.8184 1.27316 12.922 1.72619 13.7362 2.53695C14.5504 3.3477 15.0081 4.44939 15.0081 5.5984V5.5984" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M7.70365 10.1018H7.74942" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M13.5343 10.1018H13.5801" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         </div>
