@@ -12,6 +12,7 @@ use App\Http\Controllers\FrontEnd\Sitemap\SitemapController;
 use App\Http\Controllers\FrontEnd\Subscriber\SubscriberController;
 use App\Http\Service\Media\UploadMediaService;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth;
 
 /*
 |--------------------------------------------------------------------------

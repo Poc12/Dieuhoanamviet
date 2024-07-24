@@ -266,7 +266,7 @@
                     <!-- end table-responsive -->
                 </div>
             </div>
-        </div>
+        </div>----------
     </div>
     <!-- end row -->
 

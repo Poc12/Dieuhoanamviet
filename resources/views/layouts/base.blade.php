@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="_token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content=”noodp,index,follow” />
+    <meta name="robots" content="noodp,index,follow" />
     <meta name="revisit-after" content="1 days" />
-    <meta http-equiv="content-language" content=”vi” />
-    <meta http-equiv="Content-Type" content=”text/html; charset=utf-8″ />
-    <meta name="google" content=”nositelinkssearchbox” />
+    <meta http-equiv="content-language" content="vi" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="google" content="nositelinkssearchbox" />
     {!! \SEO::generate(true) !!}
     <link rel="shortcut icon" href="{{url('assets/images/logoc.png')}}">
 
@@ -38,7 +38,7 @@
 <div id="layout-wrapper">
     @include('backend.header')
     <!-- ========== Left Sidebar Start ========== -->
-    @include('backend.menu')
+    @include('backend.menu')    
     <!-- Left Sidebar End -->
 
     <div class="main-content">
@@ -60,7 +60,7 @@
 <!-- JAVASCRIPT -->
 <script src="{{url('assets/libs/jquery/jquery.min.js')}}"></script>
 <script src="{{url('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{url('assets/js/sweetalert2.js')}}"></script>
+<sZ cript src="{{url('assets/js/sweetalert2.js')}}"></sZcript>
 <script src="{{url('assets/js/select2.min.js')}}"></script>
 <script src="{{url('assets/js/notify.js')}}"></script>
 <script src="{{url('assets/libs/metismenu/metisMenu.min.js')}}"></script>
