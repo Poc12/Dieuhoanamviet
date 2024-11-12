@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /node_modules
 /public/build
 /public/hot
@@ -19,3 +20,30 @@ composer.lock
 package.lock
 *.DS_Store
 */.DS_Store
+=======
+# CakePHP 3
+
+/vendor/*
+/config/app.php
+
+/tmp/cache/models/*
+!/tmp/cache/models/empty
+/tmp/cache/persistent/*
+!/tmp/cache/persistent/empty
+/tmp/cache/views/*
+!/tmp/cache/views/empty
+/tmp/sessions/*
+!/tmp/sessions/empty
+/tmp/tests/*
+!/tmp/tests/empty
+
+/logs/*
+!/logs/empty
+
+# CakePHP 2
+
+/app/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/vendors/*
+>>>>>>> d771d0e2056177acdc9faca3c110c0d267f08434
